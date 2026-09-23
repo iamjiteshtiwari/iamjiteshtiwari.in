@@ -246,3 +246,14 @@
 .home-stories {
   border-top: 1px solid var(--color-border);
 }
+
+.page-hero { border-bottom: 1px solid var(--color-border); }
+.page-hero__content { max-width: 52rem; }
+.page-hero__content .lead { max-width: var(--content-max); margin-top: var(--space-6); }
+.page-grid { display: grid; gap: var(--space-8); }
+.page-content { display: grid; gap: var(--space-4); }
+.about-pillars { display: grid; gap: var(--space-4); margin-top: var(--space-8); }
+.about-pillars article { padding: var(--space-6); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg); }
+.about-pillars h3 { margin-bottom: var(--space-3); }
+.about-pillars p { margin-bottom: 0; color: var(--color-text-muted); }
+.page-links { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-6); }
