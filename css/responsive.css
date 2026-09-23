@@ -30,7 +30,8 @@
 
   .home-status__grid,
   .home-purpose__grid,
-  .home-learning__grid {
+  .home-learning__grid,
+  .home-interests__grid {
     grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
     gap: var(--space-12);
   }
