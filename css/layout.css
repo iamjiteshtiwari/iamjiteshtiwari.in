@@ -307,3 +307,9 @@
 .thoughts-label { margin-bottom: var(--space-3); color: var(--color-text-muted); font-size: var(--font-size-sm); font-weight: 700; }
 .thoughts-grid h3 { margin-bottom: var(--space-3); }
 .thoughts-grid article > p:last-child { margin-bottom: 0; color: var(--color-text-muted); }
+
+.story-grid { display: grid; gap: var(--space-4); margin-top: var(--space-8); }
+.story-grid article { padding: var(--space-6); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg); }
+.story-label { margin-bottom: var(--space-3); color: var(--color-text-muted); font-size: var(--font-size-sm); font-weight: 700; }
+.story-grid h3 { margin-bottom: var(--space-3); }
+.story-grid article > p:last-child { margin-bottom: 0; color: var(--color-text-muted); }
