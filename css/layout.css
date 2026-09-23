@@ -277,3 +277,9 @@
 .project-grid article { padding: var(--space-6); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg); }
 .project-grid h3 { margin-bottom: var(--space-3); }
 .project-grid article > p:last-child { margin-bottom: 0; color: var(--color-text-muted); }
+
+.capability-grid { display: grid; gap: var(--space-4); margin-top: var(--space-8); }
+.capability-grid article { padding: var(--space-6); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg); }
+.capability-grid h3 { margin-bottom: var(--space-4); }
+.capability-grid ul { display: grid; gap: var(--space-2); margin: 0; padding-left: var(--space-5); }
+.capability-grid p { margin-bottom: 0; color: var(--color-text-muted); line-height: 1.8; }
