@@ -38,6 +38,11 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--space-6);
   }
+
+  .home-capabilities__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--space-12);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
