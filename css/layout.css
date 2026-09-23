@@ -220,3 +220,29 @@
 .home-interests__content .text-link {
   margin-top: var(--space-2);
 }
+
+.home-thoughts {
+  border-top: 1px solid var(--color-border);
+}
+
+.home-thoughts__grid,
+.home-stories__grid {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.home-thoughts__content,
+.home-stories__content {
+  display: grid;
+  gap: var(--space-4);
+  max-width: var(--content-max);
+}
+
+.home-thoughts__content .text-link,
+.home-stories__content .text-link {
+  margin-top: var(--space-2);
+}
+
+.home-stories {
+  border-top: 1px solid var(--color-border);
+}
