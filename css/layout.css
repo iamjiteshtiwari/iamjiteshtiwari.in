@@ -144,3 +144,27 @@
 .home-work__item p:last-child {
   margin-bottom: 0;
 }
+
+.home-capabilities {
+  border-top: 1px solid var(--color-border);
+}
+
+.home-capabilities__grid {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+.home-capabilities__item {
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.home-capabilities__item h3 {
+  margin-bottom: var(--space-2);
+}
+
+.home-capabilities__item p {
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+}
