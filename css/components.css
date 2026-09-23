@@ -1,6 +1,7 @@
 .site-brand {
   color: inherit;
   font-weight: 700;
+  letter-spacing: -0.01em;
   text-decoration: none;
 }
 
@@ -17,8 +18,20 @@
 }
 
 .site-nav a {
-  padding-block: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
   text-decoration: none;
+  transition: background-color var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard);
+}
+
+.site-nav a:hover {
+  background: var(--color-surface);
+}
+
+.site-nav a[aria-current="page"] {
+  font-weight: 700;
+  color: var(--color-text);
+  background: var(--color-surface);
 }
 
 .site-nav.is-open {
@@ -31,6 +44,12 @@
   background: var(--color-bg);
   color: var(--color-text);
   padding: var(--space-2) var(--space-3);
+  transition: background-color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard);
+}
+
+.menu-toggle:hover {
+  background: var(--color-surface);
+  border-color: var(--color-text-subtle);
 }
 
 .eyebrow {
@@ -138,13 +157,8 @@
   border-top: 1px solid var(--color-border);
 }
 
-.site-nav a[aria-current="page"] {
-  font-weight: 700;
-}
-
 @media (min-width: 48rem) {
-  .site-nav a[aria-current="page"] {
-    text-decoration: underline;
-    text-underline-offset: 0.35em;
+  .site-nav a {
+    padding-block: var(--space-2);
   }
 }
