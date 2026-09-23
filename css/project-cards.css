@@ -1,0 +1,88 @@
+/* Project card system
+   Reusable template for future website/project cards.
+   Add new cards in projects/index.html without changing the core design system.
+*/
+
+.project-card-template {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+}
+
+.project-card-template__preview {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.project-card-template__preview iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  background: var(--color-bg);
+}
+
+.project-card-template__preview-bar {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  padding: var(--space-2) var(--space-3);
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  font-size: var(--font-size-xs);
+  pointer-events: none;
+}
+
+.project-card-template__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-6);
+}
+
+.project-card-template__label {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+}
+
+.project-card-template__body h3 {
+  margin: 0;
+}
+
+.project-card-template__description {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.project-card-template__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+/* Optional states for future cards. */
+.project-card-template.is-loading .project-card-template__preview {
+  background: var(--color-surface);
+}
+
+.project-card-template.is-unavailable .project-card-template__preview::after {
+  content: "Preview unavailable — open website";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: var(--space-4);
+  text-align: center;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+}
