@@ -295,3 +295,9 @@
 .learning-label { margin-bottom: var(--space-3); color: var(--color-text-muted); font-size: var(--font-size-sm); font-weight: 700; }
 .learning-grid h3 { margin-bottom: var(--space-3); }
 .learning-grid article > p:last-child { margin-bottom: 0; color: var(--color-text-muted); }
+
+.interest-grid { display: grid; gap: var(--space-4); }
+.interest-grid article { padding: var(--space-8); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg); }
+.interest-label { margin-bottom: var(--space-3); color: var(--color-text-muted); font-size: var(--font-size-sm); font-weight: 700; }
+.interest-grid h2 { margin-bottom: var(--space-3); font-size: var(--font-size-xl); }
+.interest-grid article > p:last-child { margin-bottom: 0; color: var(--color-text-muted); }
