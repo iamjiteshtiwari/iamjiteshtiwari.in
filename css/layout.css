@@ -1,0 +1,21 @@
+.container {
+  width: min(100% - (2 * var(--container-gutter)), var(--container-max));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--space-24);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header .container,
+.site-footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  padding-block: var(--space-4);
+}
