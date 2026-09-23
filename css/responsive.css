@@ -1,0 +1,12 @@
+@media (min-width: 48rem) {
+  :root {
+    --container-gutter: 1.5rem;
+    --font-size-3xl: 3.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
