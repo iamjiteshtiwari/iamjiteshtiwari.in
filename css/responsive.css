@@ -1,3 +1,34 @@
+@media (max-width: 47.99rem) {
+  .site-header__inner {
+    flex-wrap: wrap;
+  }
+
+  .site-nav.is-open {
+    flex-basis: 100%;
+  }
+
+  .home-intro__actions .button {
+    width: 100%;
+  }
+
+  .project-feature,
+  .contact-card {
+    padding: var(--space-6);
+  }
+
+  .website-projects {
+    grid-template-columns: 1fr;
+  }
+
+  .website-preview {
+    aspect-ratio: 16 / 10;
+  }
+
+  .site-footer .site-footer__grid {
+    display: grid;
+  }
+}
+
 @media (min-width: 48rem) {
   :root {
     --container-gutter: 1.5rem;
@@ -37,32 +68,33 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .experience-item { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); }
+  .experience-item {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  }
 
-  .project-feature { grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr); }
+  .project-feature {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+  }
 
-  .project-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
-  .capability-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .capability-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
-  .status-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .status-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
-  .status-grid article:nth-child(4), .status-grid article:nth-child(5) { grid-column: span 1; }
-
-  .learning-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-  .interest-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-  .thoughts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-  .story-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-  .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-  .website-projects--freelance { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-
-
-  .professional-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .learning-grid,
+  .interest-grid,
+  .thoughts-grid,
+  .story-grid,
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
   .home-status__grid,
   .home-purpose__grid,
@@ -82,6 +114,22 @@
   .home-capabilities__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: var(--space-12);
+  }
+}
+
+@media (min-width: 64rem) {
+  .project-grid,
+  .capability-grid,
+  .status-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .website-projects--freelance {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .professional-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
