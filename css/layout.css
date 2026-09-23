@@ -257,3 +257,13 @@
 .about-pillars h3 { margin-bottom: var(--space-3); }
 .about-pillars p { margin-bottom: 0; color: var(--color-text-muted); }
 .page-links { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-6); }
+
+.experience-list { display: grid; gap: var(--space-8); margin-top: var(--space-8); }
+.experience-item { display: grid; gap: var(--space-6); padding-block: var(--space-8); border-top: 1px solid var(--color-border); }
+.experience-period { margin-bottom: var(--space-2); color: var(--color-text-muted); font-size: var(--font-size-sm); font-weight: 700; }
+.experience-company { margin-top: var(--space-2); color: var(--color-text-muted); }
+.experience-item ul { display: grid; gap: var(--space-2); margin: 0; padding-left: var(--space-6); }
+.professional-grid { display: grid; gap: var(--space-4); margin-top: var(--space-8); }
+.professional-grid article { padding: var(--space-6); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg); }
+.professional-grid h3 { margin-bottom: var(--space-3); }
+.professional-grid p { margin-bottom: 0; color: var(--color-text-muted); }
