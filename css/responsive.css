@@ -43,6 +43,8 @@
 
   .project-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
+  .capability-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
   .professional-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
   .home-status__grid,
