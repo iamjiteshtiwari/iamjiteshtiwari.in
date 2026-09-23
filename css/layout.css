@@ -331,3 +331,37 @@
 .website-card__body .website-card__label { margin-bottom: 0; }
 .website-card__body h3 { margin-bottom: 0; }
 .website-projects__heading { margin-top: var(--space-12); }
+
+@media (hover: hover) and (pointer: fine) {
+  .home-work__item,
+  .about-pillars article,
+  .professional-grid article,
+  .project-grid article,
+  .capability-grid article,
+  .status-grid article,
+  .learning-grid article,
+  .interest-grid article,
+  .thoughts-grid article,
+  .story-grid article,
+  .contact-card,
+  .website-card {
+    transition: transform var(--duration-normal) var(--ease-standard), box-shadow var(--duration-normal) var(--ease-standard), border-color var(--duration-normal) var(--ease-standard);
+  }
+
+  .home-work__item:hover,
+  .about-pillars article:hover,
+  .professional-grid article:hover,
+  .project-grid article:hover,
+  .capability-grid article:hover,
+  .status-grid article:hover,
+  .learning-grid article:hover,
+  .interest-grid article:hover,
+  .thoughts-grid article:hover,
+  .story-grid article:hover,
+  .contact-card:hover,
+  .website-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-text-subtle);
+    box-shadow: var(--shadow-sm);
+  }
+}
