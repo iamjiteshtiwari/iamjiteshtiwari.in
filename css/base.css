@@ -17,18 +17,36 @@ body {
   line-height: var(--line-height-body);
 }
 
-img {
+img,
+svg {
   display: block;
   max-width: 100%;
-  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
 }
 
 a {
   color: var(--color-accent);
 }
 
+a:hover {
+  color: var(--color-accent-hover);
+}
+
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
   outline: 3px solid currentColor;
   outline-offset: 3px;
 }
@@ -39,6 +57,20 @@ h3,
 h4 {
   margin: 0;
   line-height: var(--line-height-heading);
+}
+
+h1 {
+  font-size: clamp(2.25rem, 8vw, var(--font-size-4xl));
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 5vw, var(--font-size-3xl));
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: var(--font-size-xl);
 }
 
 p {
