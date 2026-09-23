@@ -78,3 +78,19 @@
   margin-top: var(--space-6);
   font-weight: 700;
 }
+
+.home-status {
+  border-top: 1px solid var(--color-border);
+}
+
+.home-status__grid {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.home-status__content {
+  display: grid;
+  gap: var(--space-4);
+  max-width: var(--content-max);
+}
+
