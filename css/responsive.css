@@ -37,6 +37,10 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .experience-item { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); }
+
+  .professional-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
   .home-status__grid,
   .home-purpose__grid,
   .home-learning__grid,
