@@ -27,6 +27,17 @@
   .site-nav a {
     padding-block: 0;
   }
+
+  .home-status__grid,
+  .home-purpose__grid {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: var(--space-12);
+  }
+
+  .home-work__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
