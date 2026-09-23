@@ -112,3 +112,35 @@
 .home-purpose__content .text-link {
   margin-top: var(--space-2);
 }
+
+.home-work {
+  border-top: 1px solid var(--color-border);
+}
+
+.home-work__grid {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+.home-work__item {
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+}
+
+.home-work__label {
+  margin-bottom: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+}
+
+.home-work__item h3 {
+  margin-bottom: var(--space-3);
+}
+
+.home-work__item p:last-child {
+  margin-bottom: 0;
+}
