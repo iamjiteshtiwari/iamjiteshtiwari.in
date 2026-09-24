@@ -112,10 +112,10 @@
 }
 
 .home-intro .lead {
-  max-width: var(--measure-lead);
-  margin-top: var(--space-8);
+  max-width: 44rem;
+  margin-top: var(--space-6);
   font-size: clamp(1.125rem, 2vw, 1.3rem);
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 .home-intro__actions {
