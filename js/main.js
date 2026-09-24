@@ -35,6 +35,18 @@ if (menuToggle && siteNav) {
       return;
     }
 
+    const target = event.target;
+
+    if (target instanceof Node && !siteNav.contains(target) && !menuToggle.contains(target)) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!siteNav.classList.contains("is-open")) {
+      return;
+    }
+
     if (
       event.target instanceof Node &&
       !siteNav.contains(event.target) &&
