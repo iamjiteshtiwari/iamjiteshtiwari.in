@@ -313,18 +313,6 @@
   box-shadow: var(--shadow-card);
 }
 
-.home-status__content::before {
-  content: "CURRENT";
-  position: absolute;
-  top: var(--space-4);
-  right: var(--space-5);
-  color: var(--color-brand);
-  font-family: var(--font-mono);
-  font-size: var(--font-size-xs);
-  font-weight: 800;
-  letter-spacing: 0.08em;
-}
-
 .home-status__content p {
   width: 100%;
   max-width: none;
