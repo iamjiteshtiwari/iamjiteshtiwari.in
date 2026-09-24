@@ -1,6 +1,11 @@
 @media (max-width: 47.99rem) {
   .site-header__inner {
     flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .site-nav {
+    border-top: 1px solid var(--color-border);
   }
 
   .site-nav.is-open {
@@ -9,6 +14,10 @@
 
   .home-intro__actions .button {
     width: 100%;
+  }
+
+  .home-intro__grid {
+    gap: var(--space-8);
   }
 
   .project-feature,
