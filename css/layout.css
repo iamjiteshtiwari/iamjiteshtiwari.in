@@ -266,8 +266,6 @@
   font-weight: 700;
 }
 
-.home-status {
-
 .home-status__grid {
   display: grid;
   gap: var(--space-8);
@@ -592,8 +590,6 @@
 .home-capabilities__item + .home-capabilities__item {
   margin-top: 0;
 }
-
-.home-learning {
 
 .home-learning__grid {
   display: grid;
