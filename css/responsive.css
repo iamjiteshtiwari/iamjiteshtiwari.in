@@ -29,6 +29,9 @@
   }
 
   .home-intro__summary {
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
     padding: var(--space-6);
   }
 
