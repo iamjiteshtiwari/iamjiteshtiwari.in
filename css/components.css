@@ -273,8 +273,8 @@
 }
 
 .site-footer__contact {
-  padding-left: var(--space-6);
-  border-left: 1px solid var(--color-border);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border);
 }
 
 .site-footer__contact a:first-of-type {
