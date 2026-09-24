@@ -406,6 +406,13 @@
 
 .home-work {
   border-top: 0;
+  background:
+    radial-gradient(circle at 92% 12%, var(--color-accent-soft) 0, transparent 24%),
+    var(--color-surface);
+}
+
+.home-work .section-heading {
+  position: relative;
 }
 
 .home-work__grid {
@@ -416,10 +423,12 @@
 
 .home-work__item {
   position: relative;
+  display: grid;
+  align-content: start;
   min-height: 100%;
   padding: var(--space-8);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   background: var(--color-bg);
   box-shadow: var(--shadow-card);
   overflow: hidden;
@@ -429,20 +438,47 @@
   content: "";
   position: absolute;
   inset: 0 0 auto;
-  height: 3px;
+  height: 4px;
   background: var(--color-brand);
+}
+
+.home-work__item::after {
+  content: "01";
+  position: absolute;
+  top: var(--space-6);
+  right: var(--space-6);
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  font-weight: 800;
 }
 
 .home-work__item:nth-child(2)::before {
   background: var(--color-accent);
 }
 
+.home-work__item:nth-child(2)::after {
+  content: "02";
+}
+
 .home-work__item:nth-child(3)::before {
   background: var(--color-heading);
 }
 
+.home-work__item:nth-child(3)::after {
+  content: "03";
+}
+
 .home-work__label {
   display: inline-flex;
+  width: fit-content;
   align-items: center;
   min-height: 1.75rem;
   margin-bottom: var(--space-5);
@@ -460,10 +496,12 @@
 .home-work__item h3 {
   max-width: 18ch;
   margin-bottom: var(--space-3);
+  padding-right: var(--space-10);
   font-size: clamp(1.25rem, 2vw, 1.5rem);
 }
 
 .home-work__item p:last-child {
+  max-width: 34ch;
   margin-bottom: 0;
   color: var(--color-text-muted);
 }
