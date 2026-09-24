@@ -80,6 +80,7 @@ h2,
 h3,
 h4 {
   margin: 0;
+  color: var(--color-heading);
   line-height: var(--line-height-heading);
 }
 
