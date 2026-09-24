@@ -297,6 +297,9 @@
 
 .home-status__content {
   position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
   display: grid;
   gap: var(--space-4);
   max-width: none;
@@ -323,7 +326,10 @@
 }
 
 .home-status__content p {
-  max-width: 48rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-right: 4.5rem;
 }
 
 .home-status__content p:last-of-type {
@@ -372,6 +378,9 @@
 }
 
 .home-purpose__content {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
   display: grid;
   gap: var(--space-4);
   max-width: none;
@@ -385,7 +394,9 @@
 }
 
 .home-purpose__content p {
-  max-width: 50rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
 }
 
 .home-purpose__content p:last-of-type {
