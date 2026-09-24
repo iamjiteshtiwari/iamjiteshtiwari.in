@@ -181,6 +181,20 @@
   }
 }
 
+@media (min-width: 80rem) {
+  :root {
+    --container-gutter: 2rem;
+  }
+
+  .site-nav {
+    gap: var(--space-8);
+  }
+
+  .home-intro__grid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(20rem, 0.85fr);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
