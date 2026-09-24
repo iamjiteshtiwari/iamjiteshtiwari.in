@@ -87,7 +87,7 @@
   --color-accent-contrast: #ffffff;
   --color-header-bg: #eff6ff;
   --color-footer-bg: #dbeafe;
-  --color-heading: #0f2f5f;
+  --color-heading: #0f2f5f;\n  --color-accent-soft: #dbeafe;\n  --color-focus: #2563eb;
 }
 
 /* Emerald */
@@ -104,7 +104,7 @@
   --color-accent-contrast: #ffffff;
   --color-header-bg: #ecfdf5;
   --color-footer-bg: #d7f3e5;
-  --color-heading: #104d3a;
+  --color-heading: #104d3a;\n  --color-accent-soft: #d7f3e5;\n  --color-focus: #059669;
 }
 
 /* Royal Purple */
@@ -121,7 +121,7 @@
   --color-accent-contrast: #ffffff;
   --color-header-bg: #f5f3ff;
   --color-footer-bg: #e9ddff;
-  --color-heading: #35145e;
+  --color-heading: #35145e;\n  --color-accent-soft: #e9ddff;\n  --color-focus: #7c3aed;
 }
 
 /* Sunset Orange */
@@ -138,7 +138,7 @@
   --color-accent-contrast: #ffffff;
   --color-header-bg: #fff7ed;
   --color-footer-bg: #fed7aa;
-  --color-heading: #65240a;
+  --color-heading: #65240a;\n  --color-accent-soft: #fed7aa;\n  --color-focus: #ea580c;
 }
 
 /* Teal */
@@ -155,7 +155,7 @@
   --color-accent-contrast: #ffffff;
   --color-header-bg: #ecfeff;
   --color-footer-bg: #ccf1ef;
-  --color-heading: #0f4c4c;
+  --color-heading: #0f4c4c;\n  --color-accent-soft: #ccf1ef;\n  --color-focus: #0f766e;
 }
 
 /* Coral Rose */
@@ -172,7 +172,7 @@
   --color-accent-contrast: #ffffff;
   --color-header-bg: #fff1f2;
   --color-footer-bg: #ffdce1;
-  --color-heading: #68152a;
+  --color-heading: #68152a;\n  --color-accent-soft: #ffdce1;\n  --color-focus: #e11d48;
 }
 
 /* Indigo */
@@ -189,7 +189,7 @@
   --color-accent-contrast: #ffffff;
   --color-header-bg: #eef2ff;
   --color-footer-bg: #dde2ff;
-  --color-heading: #222e75;
+  --color-heading: #222e75;\n  --color-accent-soft: #dde2ff;\n  --color-focus: #4f46e5;
 }
 
 /* Forest */
@@ -206,7 +206,7 @@
   --color-accent-contrast: #ffffff;
   --color-header-bg: #f0fdf4;
   --color-footer-bg: #dcebd8;
-  --color-heading: #1e4d27;
+  --color-heading: #1e4d27;\n  --color-accent-soft: #dcebd8;\n  --color-focus: #15803d;
 }
 
 /* Berry */
@@ -223,7 +223,7 @@
   --color-accent-contrast: #ffffff;
   --color-header-bg: #fdf4ff;
   --color-footer-bg: #f5d8eb;
-  --color-heading: #65145e;
+  --color-heading: #65145e;\n  --color-accent-soft: #f5d8eb;\n  --color-focus: #c026d3;
 }
 
 /* Charcoal Gold */
@@ -240,5 +240,5 @@
   --color-accent-contrast: #ffffff;
   --color-header-bg: #fffaf0;
   --color-footer-bg: #e8e4d5;
-  --color-heading: #4a3a14;
+  --color-heading: #4a3a14;\n  --color-accent-soft: #e8e4d5;\n  --color-focus: #b7791f;
 }
