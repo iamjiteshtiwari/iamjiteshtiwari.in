@@ -144,6 +144,10 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .home-interests__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .site-footer .site-footer__grid {
     grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 0.7fr);
     align-items: start;
@@ -219,6 +223,10 @@
   }
 
   .home-learning__cards {
+    gap: var(--space-6);
+  }
+
+  .home-interests__cards {
     gap: var(--space-6);
   }
 
