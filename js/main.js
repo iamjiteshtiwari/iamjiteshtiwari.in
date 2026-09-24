@@ -89,3 +89,18 @@ if (menuToggle && siteNav) {
     }
   });
 }
+
+
+const contactStatus = document.querySelector("#contact-status");
+
+if (contactStatus) {
+  const status = new URLSearchParams(window.location.search).get("status");
+
+  if (status === "success") {
+    contactStatus.textContent = "Thanks — your message has been sent.";
+    contactStatus.hidden = false;
+  } else if (status === "error") {
+    contactStatus.textContent = "The message could not be sent. Please try email instead.";
+    contactStatus.hidden = false;
+  }
+}
