@@ -56,6 +56,14 @@
   min-height: 0;
 }
 
+.site-header.is-scrolled .site-brand {
+  min-height: 2.25rem;
+}
+
+.site-header.is-scrolled .site-nav a {
+  min-height: 2.25rem;
+}
+
 .site-header.is-scrolled .container {
   min-height: 3rem;
   padding-block: 0.25rem;
