@@ -90,8 +90,13 @@
             <label for="contact-message">Message</label>
             <textarea id="contact-message" name="message" rows="7" required></textarea>
           </div>
+          <div class="contact-form__trap" aria-hidden="true">
+            <label for="contact-website">Website</label>
+            <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
           <button class="button button--primary" type="submit">Send message</button>
         </form>
+        <p class="contact-form__status" id="contact-status" role="status" aria-live="polite" hidden></p>
       </div>
     </section>
 
