@@ -10,10 +10,11 @@
 
 .section {
   padding-block: var(--space-16);
+  border-top: 1px solid var(--color-border);
 }
 
-.section + .section {
-  border-top: 1px solid var(--color-border);
+.section:first-of-type {
+  border-top: 0;
 }
 
 .section--surface {
@@ -266,8 +267,6 @@
 }
 
 .home-status {
-  border-top: 0;
-}
 
 .home-status__grid {
   display: grid;
@@ -595,8 +594,6 @@
 }
 
 .home-learning {
-  border-top: 0;
-}
 
 .home-learning__grid {
   display: grid;
