@@ -696,7 +696,7 @@
   z-index: 1;
   max-width: 20ch;
   margin-bottom: var(--space-3);
-  padding-right: var(--space-8);
+  padding-right: 0;
   font-size: clamp(1.2rem, 2vw, 1.4rem);
 }
 
@@ -705,6 +705,7 @@
   z-index: 1;
   max-width: 38ch;
   margin-bottom: 0;
+  padding-right: 0;
   color: var(--color-text-muted);
 }
 
