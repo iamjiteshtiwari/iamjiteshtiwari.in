@@ -48,9 +48,6 @@
     aspect-ratio: 16 / 10;
   }
 
-  .site-footer .site-footer__grid {
-    display: grid;
-  }
 }
 
 @media (min-width: 48rem) {
@@ -264,7 +261,6 @@
   .site-nav {
     gap: var(--space-8);
   }
-
 }
 
 @media (prefers-reduced-motion: reduce) {
