@@ -14,7 +14,7 @@
 }
 
 .site-brand__code {
-  color: var(--color-accent);
+  color: var(--color-brand);
   font-weight: 800;
   letter-spacing: -0.08em;
 }
@@ -30,12 +30,12 @@
 }
 
 .site-brand__name {
-  color: var(--color-accent);
+  color: var(--color-brand);
 }
 
 .site-brand:hover .site-brand__code,
 .site-brand:hover .site-brand__name {
-  color: var(--color-accent-hover);
+  color: var(--color-brand-hover);
 }
 
 .site-brand:hover {
