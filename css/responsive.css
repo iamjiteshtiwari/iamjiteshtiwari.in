@@ -36,7 +36,8 @@
   }
 
   .project-feature,
-  .contact-card {
+  .contact-card,
+  .contact-form {
     padding: var(--space-6);
   }
 
