@@ -153,9 +153,9 @@
 .home-intro__summary-label {
   margin-bottom: var(--space-5);
   color: var(--color-heading);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
   font-weight: 800;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
 
 .home-intro__summary ul {
