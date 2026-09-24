@@ -281,12 +281,13 @@
 .home-status__grid > div:first-child::after {
   content: "01";
   position: absolute;
-  top: 0;
+  top: 0.15rem;
   right: 0;
   color: var(--color-text-subtle);
   font-family: var(--font-mono);
   font-size: var(--font-size-xs);
   font-weight: 800;
+  line-height: 1;
 }
 
 .home-status__content {
@@ -335,18 +336,7 @@
 }
 
 .home-purpose::before {
-  content: "ABOUT";
-  position: absolute;
-  top: var(--space-6);
-  right: max(var(--container-gutter), calc((100vw - var(--container-max)) / 2));
-  color: var(--color-border);
-  font-family: var(--font-mono);
-  font-size: clamp(2rem, 5vw, 4rem);
-  font-weight: 800;
-  letter-spacing: -0.08em;
-  line-height: 1;
-  opacity: 0.55;
-  pointer-events: none;
+  display: none;
 }
 
 .home-purpose__grid {
@@ -365,12 +355,13 @@
 .home-purpose__grid > div:first-child::after {
   content: "02";
   position: absolute;
-  top: 0;
+  top: 0.15rem;
   right: 0;
   color: var(--color-text-subtle);
   font-family: var(--font-mono);
   font-size: var(--font-size-xs);
   font-weight: 800;
+  line-height: 1;
 }
 
 .home-purpose__content {
