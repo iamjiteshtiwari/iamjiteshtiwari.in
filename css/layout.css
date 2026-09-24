@@ -47,6 +47,7 @@
 
 .home-intro__summary {
   padding: var(--space-6);
+  border-top: 4px solid var(--color-accent);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: var(--color-surface);
@@ -251,7 +252,10 @@
   border-top: 1px solid var(--color-border);
 }
 
-.page-hero { border-bottom: 1px solid var(--color-border); }
+.page-hero {
+  border-bottom: 1px solid var(--color-border);
+  background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-bg) 100%);
+}
 .page-hero__content { max-width: 52rem; }
 .page-hero__content .lead { max-width: var(--content-max); margin-top: var(--space-6); }
 .page-grid { display: grid; gap: var(--space-8); }
