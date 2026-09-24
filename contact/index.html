@@ -67,6 +67,35 @@
     </section>
 
     <section class="section">
+      <div class="container contact-form-grid">
+        <div class="section-heading">
+          <p class="eyebrow">Send a message</p>
+          <h2>Tell me what you have in mind.</h2>
+          <p>Use the form for project enquiries, professional opportunities, collaboration, or a general message.</p>
+        </div>
+        <form class="contact-form" action="/contact/send.php" method="post">
+          <div class="contact-form__field">
+            <label for="contact-name">Name</label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="contact-form__field">
+            <label for="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="contact-form__field">
+            <label for="contact-subject">Subject</label>
+            <input id="contact-subject" name="subject" type="text" required>
+          </div>
+          <div class="contact-form__field">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="7" required></textarea>
+          </div>
+          <button class="button button--primary" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="container page-grid">
         <div><p class="eyebrow">What you can contact me about</p><h2>Professional &amp; personal enquiries.</h2></div>
         <div class="prose page-content">
