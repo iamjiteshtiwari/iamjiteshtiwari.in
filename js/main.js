@@ -17,6 +17,11 @@ if (menuToggle && siteNav) {
     const isOpen = siteNav.classList.toggle("is-open");
     menuToggle.setAttribute("aria-expanded", String(isOpen));
     menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+
+    if (isOpen) {
+      const firstLink = siteNav.querySelector("a");
+      firstLink?.focus();
+    }
   });
 
   siteNav.addEventListener("click", (event) => {
