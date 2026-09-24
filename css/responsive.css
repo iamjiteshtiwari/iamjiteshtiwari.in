@@ -178,6 +178,7 @@
 
   .home-intro__grid {
     width: 100%;
+    align-items: start;
   }
 
   .home-intro__summary {
