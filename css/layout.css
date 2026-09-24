@@ -1384,12 +1384,57 @@
   line-height: 1.75;
 }
 
-.thoughts-grid { display: grid; gap: var(--space-4); margin-top: var(--space-8); }
-.thoughts-grid article { padding: var(--space-6); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg); 
-  box-shadow: var(--shadow-card);}
-.thoughts-label { margin-bottom: var(--space-3); color: var(--color-text-muted); font-size: var(--font-size-sm); font-weight: 700; }
-.thoughts-grid h3 { margin-bottom: var(--space-3); }
-.thoughts-grid article > p:last-child { margin-bottom: 0; color: var(--color-text-muted); }
+.thoughts-grid {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+.thoughts-grid article {
+  position: relative;
+  min-height: 100%;
+  padding: var(--space-7);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.thoughts-grid article::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--color-brand);
+}
+
+.thoughts-grid article:nth-child(2)::before { background: var(--color-accent); }
+.thoughts-grid article:nth-child(3)::before { background: var(--color-heading); }
+.thoughts-grid article:nth-child(4)::before { background: var(--color-text-subtle); }
+
+.thoughts-label {
+  margin-bottom: var(--space-4);
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.thoughts-grid h3 {
+  max-width: 24ch;
+  margin-bottom: var(--space-3);
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+}
+
+.thoughts-grid article > p:last-child {
+  max-width: 40ch;
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+}
 
 .story-grid { display: grid; gap: var(--space-4); margin-top: var(--space-8); }
 .story-grid article { padding: var(--space-6); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg); 
