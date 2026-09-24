@@ -122,7 +122,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3);
-  margin-top: var(--space-8);
+  margin-top: var(--space-7);
 }
 
 .home-intro__summary {
