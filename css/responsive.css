@@ -181,7 +181,19 @@
   }
 
   .home-intro__summary {
-    padding: var(--space-8) var(--space-10);
+    max-width: 38rem;
+    padding: var(--space-8) var(--space-9);
+  }
+
+  .home-intro__summary ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--space-8);
+  }
+
+  .home-intro__summary li {
+    min-height: 2.75rem;
+    display: flex;
+    align-items: center;
   }
 
   .site-nav {
