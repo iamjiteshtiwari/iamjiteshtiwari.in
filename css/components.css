@@ -56,6 +56,15 @@
   border-color: var(--color-text-subtle);
 }
 
+.menu-toggle:active {
+  background: var(--color-surface-strong);
+}
+
+.menu-toggle[aria-expanded="true"] {
+  background: var(--color-surface);
+  border-color: var(--color-text-subtle);
+}
+
 .eyebrow {
   margin-bottom: var(--space-3);
   color: var(--color-text-muted);
