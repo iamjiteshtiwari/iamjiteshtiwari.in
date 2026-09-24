@@ -71,6 +71,10 @@ select:focus-visible {
   outline-offset: 3px;
 }
 
+[tabindex="-1"]:focus {
+  outline: none;
+}
+
 h1,
 h2,
 h3,
