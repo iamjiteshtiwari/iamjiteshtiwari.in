@@ -56,6 +56,8 @@ button {
 
 a {
   color: var(--color-accent);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.15em;
 }
 
 a:hover {
