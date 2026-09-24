@@ -30,6 +30,20 @@ if (menuToggle && siteNav) {
     }
   });
 
+  document.addEventListener("click", (event) => {
+    if (!siteNav.classList.contains("is-open")) {
+      return;
+    }
+
+    if (
+      event.target instanceof Node &&
+      !siteNav.contains(event.target) &&
+      !menuToggle.contains(event.target)
+    ) {
+      closeMenu();
+    }
+  });
+
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && siteNav.classList.contains("is-open")) {
       closeMenu();
