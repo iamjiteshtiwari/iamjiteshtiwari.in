@@ -17,6 +17,8 @@
   --color-header-bg: #eff6ff;
   --color-footer-bg: #dbeafe;
   --color-heading: #0f2f5f;
+  --color-accent-soft: #dbeafe;
+  --color-focus: #2563eb;
 
   /* Typography */
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
