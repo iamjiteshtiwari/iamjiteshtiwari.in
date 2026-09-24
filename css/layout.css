@@ -101,7 +101,6 @@
 }
 
 .home-intro h1 {
-  max-width: 14ch;
   font-size: clamp(3rem, 9vw, 5rem);
   letter-spacing: -0.055em;
   line-height: 0.98;
