@@ -11,6 +11,10 @@
   padding-block: var(--space-16);
 }
 
+.section + .section {
+  border-top: 1px solid var(--color-border);
+}
+
 .section--surface {
   background: var(--color-surface);
 }
@@ -86,7 +90,7 @@
 }
 
 .home-status {
-  border-top: 1px solid var(--color-border);
+  border-top: 0;
 }
 
 .home-status__grid {
@@ -101,7 +105,7 @@
 }
 
 .home-purpose {
-  border-top: 1px solid var(--color-border);
+  border-top: 0;
 }
 
 .home-purpose__grid {
@@ -120,7 +124,7 @@
 }
 
 .home-work {
-  border-top: 1px solid var(--color-border);
+  border-top: 0;
 }
 
 .home-work__grid {
@@ -149,7 +153,7 @@
 }
 
 .home-capabilities {
-  border-top: 1px solid var(--color-border);
+  border-top: 0;
 }
 
 .home-capabilities__grid {
@@ -173,7 +177,7 @@
 }
 
 .home-learning {
-  border-top: 1px solid var(--color-border);
+  border-top: 0;
 }
 
 .home-learning__grid {
@@ -199,7 +203,7 @@
 }
 
 .home-interests {
-  border-top: 1px solid var(--color-border);
+  border-top: 0;
 }
 
 .home-interests__grid {
@@ -225,7 +229,7 @@
 }
 
 .home-thoughts {
-  border-top: 1px solid var(--color-border);
+  border-top: 0;
 }
 
 .home-thoughts__grid,
@@ -247,7 +251,7 @@
 }
 
 .home-stories {
-  border-top: 1px solid var(--color-border);
+  border-top: 0;
 }
 
 .page-hero {
