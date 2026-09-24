@@ -90,11 +90,13 @@ h4 {
 h1 {
   font-size: clamp(2.25rem, 8vw, var(--font-size-4xl));
   letter-spacing: -0.03em;
+  max-width: var(--measure-heading);
 }
 
 h2 {
   font-size: clamp(1.75rem, 5vw, var(--font-size-3xl));
   letter-spacing: -0.02em;
+  max-width: var(--measure-heading);
 }
 
 h3 {
@@ -102,6 +104,7 @@ h3 {
 }
 
 p {
+  max-width: var(--measure-body);
   margin: 0;
 }
 
