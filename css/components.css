@@ -432,3 +432,39 @@ textarea.form-control {
   padding: 0;
   list-style: none;
 }
+
+
+/* Status and notice foundation */
+.status-message {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+}
+
+.status-message__title {
+  margin: 0;
+  color: var(--color-heading);
+  font-weight: 700;
+}
+
+.status-message__text {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.status-message--accent {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.status-message--success {
+  border-color: var(--color-accent);
+  background: var(--color-surface);
+}
+
+.status-message--muted {
+  color: var(--color-text-muted);
+}
