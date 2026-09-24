@@ -36,6 +36,30 @@
   padding-block: var(--space-4);
 }
 
+.site-header {
+  transition:
+    box-shadow var(--duration-normal) var(--ease-standard),
+    background-color var(--duration-normal) var(--ease-standard);
+}
+
+.site-header__inner {
+  transition:
+    min-height var(--duration-normal) var(--ease-standard),
+    padding-block var(--duration-normal) var(--ease-standard);
+}
+
+.site-header.is-scrolled {
+  box-shadow: var(--shadow-sm);
+}
+
+.site-header.is-scrolled .site-header__inner {
+  min-height: 3.5rem;
+}
+
+.site-header.is-scrolled .container {
+  padding-block: var(--space-2);
+}
+
 .home-intro__grid {
   display: grid;
   gap: var(--space-12);
