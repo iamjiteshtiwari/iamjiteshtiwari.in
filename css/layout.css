@@ -635,6 +635,23 @@
   padding: var(--space-7);
 }
 
+.home-learning__card-content h3 {
+  position: relative;
+  z-index: 1;
+  max-width: 20ch;
+  margin-bottom: var(--space-3);
+  padding-right: 3.5rem;
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+}
+
+.home-learning__card-content p {
+  position: relative;
+  z-index: 1;
+  max-width: 38ch;
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+}
+
 .home-learning__card::before {
   content: "";
   position: absolute;
@@ -694,24 +711,6 @@
   font-family: var(--font-mono);
   font-size: var(--font-size-xs);
   font-weight: 800;
-}
-
-.home-learning__card h3 {
-  position: relative;
-  z-index: 1;
-  max-width: 20ch;
-  margin-bottom: var(--space-3);
-  padding-right: 0;
-  font-size: clamp(1.2rem, 2vw, 1.4rem);
-}
-
-.home-learning__card p {
-  position: relative;
-  z-index: 1;
-  max-width: 38ch;
-  margin-bottom: 0;
-  padding-right: 0;
-  color: var(--color-text-muted);
 }
 
 .home-learning__content .text-link {
