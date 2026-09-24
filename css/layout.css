@@ -619,10 +619,12 @@
 
 .home-learning__card {
   position: relative;
+  display: grid;
+  align-content: start;
   min-height: 100%;
-  padding: var(--space-6);
+  padding: var(--space-7);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   background: var(--color-bg);
   box-shadow: var(--shadow-card);
   overflow: hidden;
@@ -632,24 +634,50 @@
   content: "";
   position: absolute;
   inset: 0 0 auto;
-  height: 3px;
+  height: 4px;
   background: var(--color-brand);
+}
+
+.home-learning__card::after {
+  content: "01";
+  position: absolute;
+  top: var(--space-6);
+  right: var(--space-6);
+  color: var(--color-border-strong);
+  font-family: var(--font-mono);
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.08em;
+  line-height: 1;
 }
 
 .home-learning__card:nth-child(2)::before {
   background: var(--color-accent);
 }
 
+.home-learning__card:nth-child(2)::after {
+  content: "02";
+}
+
 .home-learning__card:nth-child(3)::before {
   background: var(--color-heading);
+}
+
+.home-learning__card:nth-child(3)::after {
+  content: "03";
 }
 
 .home-learning__card:nth-child(4)::before {
   background: var(--color-text-subtle);
 }
 
+.home-learning__card:nth-child(4)::after {
+  content: "04";
+}
+
 .home-learning__number {
   display: inline-flex;
+  width: fit-content;
   align-items: center;
   min-height: 1.75rem;
   margin-bottom: var(--space-5);
@@ -664,12 +692,18 @@
 }
 
 .home-learning__card h3 {
+  position: relative;
+  z-index: 1;
   max-width: 20ch;
   margin-bottom: var(--space-3);
-  font-size: clamp(1.125rem, 2vw, 1.35rem);
+  padding-right: var(--space-8);
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
 }
 
 .home-learning__card p {
+  position: relative;
+  z-index: 1;
+  max-width: 38ch;
   margin-bottom: 0;
   color: var(--color-text-muted);
 }
