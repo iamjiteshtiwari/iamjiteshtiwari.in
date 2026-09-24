@@ -8,12 +8,36 @@ if (currentYear) {
 }
 
 if (siteHeader) {
+  const compactAt = 48;
+  const expandedAt = 12;
+  let isCompact = siteHeader.classList.contains("is-scrolled");
+  let scrollFrame = null;
+
   const updateHeaderState = () => {
-    siteHeader.classList.toggle("is-scrolled", window.scrollY > 8);
+    const scrollY = window.scrollY;
+
+    if (!isCompact && scrollY > compactAt) {
+      isCompact = true;
+      siteHeader.classList.add("is-scrolled");
+    } else if (isCompact && scrollY < expandedAt) {
+      isCompact = false;
+      siteHeader.classList.remove("is-scrolled");
+    }
+  };
+
+  const handleScroll = () => {
+    if (scrollFrame !== null) {
+      return;
+    }
+
+    scrollFrame = window.requestAnimationFrame(() => {
+      updateHeaderState();
+      scrollFrame = null;
+    });
   };
 
   updateHeaderState();
-  window.addEventListener("scroll", updateHeaderState, { passive: true });
+  window.addEventListener("scroll", handleScroll, { passive: true });
 }
 
 if (menuToggle && siteNav) {
