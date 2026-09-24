@@ -4,12 +4,28 @@
 */
 
 .project-card-template {
+  position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   background: var(--color-bg);
+  box-shadow: var(--shadow-card);
+}
+
+.project-card-template::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 2;
+  height: 4px;
+  background: var(--color-brand);
+  pointer-events: none;
+}
+
+.project-card-template:nth-child(2n)::before {
+  background: var(--color-accent);
 }
 
 .project-card-template__preview {
@@ -33,8 +49,8 @@
   inset-inline: 0;
   bottom: 0;
   padding: var(--space-2) var(--space-3);
-  background: rgba(0, 0, 0, 0.72);
-  color: #fff;
+  background: var(--color-overlay-bg);
+  color: var(--color-overlay-text);
   font-size: var(--font-size-xs);
   pointer-events: none;
 }
@@ -44,14 +60,17 @@
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-2);
-  padding: var(--space-6);
+  padding: var(--space-7);
 }
 
 .project-card-template__label {
-  margin: 0;
-  color: var(--color-text-muted);
-  font-size: var(--font-size-sm);
-  font-weight: 700;
+  margin: 0 0 var(--space-1);
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .project-card-template__body h3 {
@@ -67,12 +86,15 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3);
-  margin-top: var(--space-2);
+  margin-top: var(--space-3);
 }
 
 /* Optional states for future cards. */
 .project-card-template.is-loading .project-card-template__preview {
-  background: var(--color-surface);
+  background:
+    linear-gradient(110deg, var(--color-surface) 30%, var(--color-bg) 45%, var(--color-surface) 60%),
+    var(--color-surface);
+  background-size: 220% 100%;
 }
 
 .project-card-template.is-unavailable .project-card-template__preview::after {
@@ -85,4 +107,19 @@
   text-align: center;
   background: var(--color-surface);
   color: var(--color-text-muted);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card-template {
+    transition:
+      transform var(--duration-normal) var(--ease-standard),
+      box-shadow var(--duration-normal) var(--ease-standard),
+      border-color var(--duration-normal) var(--ease-standard);
+  }
+
+  .project-card-template:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-text-subtle);
+    box-shadow: var(--shadow-md);
+  }
 }
