@@ -622,12 +622,17 @@
   display: grid;
   align-content: start;
   min-height: 100%;
-  padding: var(--space-7);
+  padding: 0;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   background: var(--color-bg);
   box-shadow: var(--shadow-card);
   overflow: hidden;
+}
+
+.home-learning__card-content {
+  min-width: 0;
+  padding: var(--space-7);
 }
 
 .home-learning__card::before {
