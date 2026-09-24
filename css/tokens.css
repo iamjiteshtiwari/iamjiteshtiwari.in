@@ -19,6 +19,8 @@
   --color-heading: #0f2f5f;
   --color-accent-soft: #dbeafe;
   --color-focus: #2563eb;
+  --color-overlay-bg: rgb(15 23 42 / 0.82);
+  --color-overlay-text: #ffffff;
 
   /* Typography */
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -88,6 +90,8 @@
   --color-header-bg: #eff6ff;
   --color-footer-bg: #dbeafe;
   --color-heading: #0f2f5f;\n  --color-accent-soft: #dbeafe;\n  --color-focus: #2563eb;
+  --color-overlay-bg: rgb(15 23 42 / 0.82);
+  --color-overlay-text: #ffffff;
 }
 
 /* Emerald */
@@ -105,6 +109,8 @@
   --color-header-bg: #ecfdf5;
   --color-footer-bg: #d7f3e5;
   --color-heading: #104d3a;\n  --color-accent-soft: #d7f3e5;\n  --color-focus: #059669;
+  --color-overlay-bg: rgb(15 23 42 / 0.82);
+  --color-overlay-text: #ffffff;
 }
 
 /* Royal Purple */
@@ -122,6 +128,8 @@
   --color-header-bg: #f5f3ff;
   --color-footer-bg: #e9ddff;
   --color-heading: #35145e;\n  --color-accent-soft: #e9ddff;\n  --color-focus: #7c3aed;
+  --color-overlay-bg: rgb(15 23 42 / 0.82);
+  --color-overlay-text: #ffffff;
 }
 
 /* Sunset Orange */
@@ -139,6 +147,8 @@
   --color-header-bg: #fff7ed;
   --color-footer-bg: #fed7aa;
   --color-heading: #65240a;\n  --color-accent-soft: #fed7aa;\n  --color-focus: #ea580c;
+  --color-overlay-bg: rgb(15 23 42 / 0.82);
+  --color-overlay-text: #ffffff;
 }
 
 /* Teal */
@@ -156,6 +166,8 @@
   --color-header-bg: #ecfeff;
   --color-footer-bg: #ccf1ef;
   --color-heading: #0f4c4c;\n  --color-accent-soft: #ccf1ef;\n  --color-focus: #0f766e;
+  --color-overlay-bg: rgb(15 23 42 / 0.82);
+  --color-overlay-text: #ffffff;
 }
 
 /* Coral Rose */
@@ -173,6 +185,8 @@
   --color-header-bg: #fff1f2;
   --color-footer-bg: #ffdce1;
   --color-heading: #68152a;\n  --color-accent-soft: #ffdce1;\n  --color-focus: #e11d48;
+  --color-overlay-bg: rgb(15 23 42 / 0.82);
+  --color-overlay-text: #ffffff;
 }
 
 /* Indigo */
@@ -190,6 +204,8 @@
   --color-header-bg: #eef2ff;
   --color-footer-bg: #dde2ff;
   --color-heading: #222e75;\n  --color-accent-soft: #dde2ff;\n  --color-focus: #4f46e5;
+  --color-overlay-bg: rgb(15 23 42 / 0.82);
+  --color-overlay-text: #ffffff;
 }
 
 /* Forest */
@@ -207,6 +223,8 @@
   --color-header-bg: #f0fdf4;
   --color-footer-bg: #dcebd8;
   --color-heading: #1e4d27;\n  --color-accent-soft: #dcebd8;\n  --color-focus: #15803d;
+  --color-overlay-bg: rgb(15 23 42 / 0.82);
+  --color-overlay-text: #ffffff;
 }
 
 /* Berry */
@@ -224,6 +242,8 @@
   --color-header-bg: #fdf4ff;
   --color-footer-bg: #f5d8eb;
   --color-heading: #65145e;\n  --color-accent-soft: #f5d8eb;\n  --color-focus: #c026d3;
+  --color-overlay-bg: rgb(15 23 42 / 0.82);
+  --color-overlay-text: #ffffff;
 }
 
 /* Charcoal Gold */
@@ -241,4 +261,6 @@
   --color-header-bg: #fffaf0;
   --color-footer-bg: #e8e4d5;
   --color-heading: #4a3a14;\n  --color-accent-soft: #e8e4d5;\n  --color-focus: #b7791f;
+  --color-overlay-bg: rgb(15 23 42 / 0.82);
+  --color-overlay-text: #ffffff;
 }
