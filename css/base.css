@@ -103,3 +103,26 @@ h3 {
 p {
   margin: 0;
 }
+
+
+/* Base element normalization */
+ul,
+ol {
+  margin-block: 0;
+}
+
+button {
+  border: 0;
+}
+
+button:disabled,
+input:disabled,
+textarea:disabled,
+select:disabled {
+  cursor: not-allowed;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+}
