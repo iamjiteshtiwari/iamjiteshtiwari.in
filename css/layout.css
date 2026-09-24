@@ -373,3 +373,34 @@
     box-shadow: var(--shadow-sm);
   }
 }
+
+
+/* Section heading rhythm */
+.section-heading {
+  display: grid;
+  gap: var(--space-3);
+  max-width: var(--content-max);
+  margin-bottom: var(--space-8);
+}
+
+.section-heading h2 {
+  margin: 0;
+}
+
+.section-heading p {
+  color: var(--color-text-muted);
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 0;
+}
+
+.page-hero__inner {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.page-hero__inner > p {
+  max-width: var(--content-max);
+  color: var(--color-text-muted);
+}
