@@ -36,6 +36,9 @@
   --line-height-body: 1.6;
   --line-height-tight: 1.1;
   --line-height-heading: 1.15;
+  --measure-heading: 18ch;
+  --measure-body: 65ch;
+  --measure-lead: 58ch;
 
   /* Spacing */
   --space-1: 0.25rem;
