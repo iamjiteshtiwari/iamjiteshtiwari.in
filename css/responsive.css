@@ -135,11 +135,41 @@
   }
 }
 
+@media (min-width: 48rem) and (max-width: 63.99rem) {
+  .site-nav {
+    gap: var(--space-3);
+  }
+
+  .site-nav a {
+    padding-inline: var(--space-2);
+  }
+
+  .site-brand {
+    flex-shrink: 0;
+  }
+
+  .website-projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .website-projects--freelance {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (min-width: 64rem) {
+  .site-nav {
+    gap: var(--space-6);
+  }
+
   .project-grid,
   .capability-grid,
   .status-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .website-projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .website-projects--freelance {
