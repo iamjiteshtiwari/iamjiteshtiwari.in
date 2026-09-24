@@ -1333,12 +1333,56 @@
   line-height: 1.75;
 }
 
-.interest-grid { display: grid; gap: var(--space-4); }
-.interest-grid article { padding: var(--space-8); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg); 
-  box-shadow: var(--shadow-card);}
-.interest-label { margin-bottom: var(--space-3); color: var(--color-text-muted); font-size: var(--font-size-sm); font-weight: 700; }
-.interest-grid h2 { margin-bottom: var(--space-3); font-size: var(--font-size-xl); }
-.interest-grid article > p:last-child { margin-bottom: 0; color: var(--color-text-muted); }
+.interest-grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.interest-grid article {
+  position: relative;
+  min-height: 100%;
+  padding: var(--space-8);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.interest-grid article::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--color-brand);
+}
+
+.interest-grid article:nth-child(2)::before { background: var(--color-accent); }
+.interest-grid article:nth-child(3)::before { background: var(--color-heading); }
+.interest-grid article:nth-child(4)::before { background: var(--color-text-subtle); }
+
+.interest-label {
+  margin-bottom: var(--space-5);
+  color: var(--color-border-strong);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.interest-grid h2 {
+  max-width: 20ch;
+  margin-bottom: var(--space-3);
+  font-size: clamp(1.3rem, 2vw, 1.55rem);
+}
+
+.interest-grid article > p:last-child {
+  max-width: 40ch;
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+}
 
 .thoughts-grid { display: grid; gap: var(--space-4); margin-top: var(--space-8); }
 .thoughts-grid article { padding: var(--space-6); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg); 
