@@ -577,6 +577,66 @@
   max-width: var(--content-max);
 }
 
+.home-thoughts__content {
+  max-width: none;
+}
+
+.home-thoughts__intro {
+  display: grid;
+  gap: var(--space-4);
+  max-width: var(--content-max);
+}
+
+.home-thoughts__intro p {
+  margin-bottom: 0;
+}
+
+.home-thoughts__tag {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  min-height: 1.75rem;
+  padding-inline: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.home-thoughts__note {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-5);
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  box-shadow: var(--shadow-card);
+}
+
+.home-thoughts__note-mark {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  font-weight: 800;
+  letter-spacing: -0.08em;
+}
+
+.home-thoughts__note h3 {
+  margin-bottom: var(--space-2);
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+}
+
+.home-thoughts__note p {
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+}
+
 .home-thoughts__content .text-link,
 .home-stories__content .text-link {
   margin-top: var(--space-2);
