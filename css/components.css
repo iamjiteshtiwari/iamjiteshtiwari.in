@@ -30,18 +30,23 @@
   min-height: 2.75rem;
   padding: var(--space-2) var(--space-3);
   border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-weight: 600;
   text-decoration: none;
-  transition: background-color var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard);
+  transition:
+    color var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard);
 }
 
 .site-nav a:hover {
   background: var(--color-surface);
+  color: var(--color-accent);
 }
 
 .site-nav a[aria-current="page"] {
-  font-weight: 700;
-  color: var(--color-accent);
   background: var(--color-surface);
+  color: var(--color-accent);
+  font-weight: 700;
 }
 
 .site-nav.is-open {
@@ -49,18 +54,23 @@
 }
 
 .menu-toggle {
+  display: inline-grid;
+  place-items: center;
+  min-width: 2.75rem;
   min-height: 2.75rem;
+  padding: var(--space-2);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   background: var(--color-bg);
-  color: var(--color-text);
-  padding: var(--space-2) var(--space-3);
-  transition: background-color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard);
+  color: var(--color-heading);
+  transition:
+    border-color var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard);
 }
 
 .menu-toggle:hover {
-  background: var(--color-surface);
-  border-color: var(--color-text-subtle);
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
 }
 
 .menu-toggle:active {
@@ -68,8 +78,8 @@
 }
 
 .menu-toggle[aria-expanded="true"] {
-  background: var(--color-surface);
   border-color: var(--color-text-subtle);
+  background: var(--color-surface);
 }
 
 .eyebrow {
@@ -96,9 +106,14 @@
   padding: var(--space-3) var(--space-4);
   border: 1px solid var(--color-accent);
   border-radius: var(--radius-sm);
-  text-decoration: none;
   font-weight: 700;
-  transition: background-color var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard), transform var(--duration-fast) var(--ease-standard), box-shadow var(--duration-fast) var(--ease-standard);
+  text-decoration: none;
+  transition:
+    background-color var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
 }
 
 .button:hover {
@@ -133,7 +148,7 @@
 .site-footer {
   border-top: 1px solid var(--color-border);
   background: var(--color-footer-bg);
-  color: var(--color-text-muted);
+  color: var(--color-text);
 }
 
 .site-footer__grid {
@@ -153,6 +168,7 @@
 }
 
 .site-footer__note {
+  color: var(--color-text-muted);
   font-size: var(--font-size-sm);
 }
 
@@ -168,14 +184,29 @@
   gap: var(--space-2);
 }
 
-.site-footer h2 {
-  margin-bottom: var(--space-2);
-  font-size: var(--font-size-sm);
+.site-footer h2,
+.site-footer__heading {
+  margin: 0 0 var(--space-3);
   color: var(--color-heading);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
 }
 
 .site-footer a {
   width: fit-content;
+  color: var(--color-text);
+}
+
+.site-footer a:hover {
+  color: var(--color-accent);
+}
+
+.site-footer__links {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .site-footer__bottom {
@@ -184,16 +215,11 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-4);
-  padding-block: var(--space-4);
+  padding-block: var(--space-6);
   border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
 }
-
-@media (min-width: 48rem) {
-  .site-nav a {
-    padding-block: var(--space-2);
-  }
-}
-
 
 /* Shared card foundation */
 .card,
@@ -255,7 +281,6 @@
   }
 }
 
-
 /* Form foundation */
 .form-group {
   display: grid;
@@ -309,97 +334,6 @@ textarea.form-control {
   opacity: 0.7;
 }
 
-
-/* Navigation foundation */
-.site-nav a {
-  color: var(--color-text);
-  text-decoration: none;
-  font-weight: 600;
-  transition:
-    color var(--duration-fast) var(--ease-standard),
-    background-color var(--duration-fast) var(--ease-standard);
-}
-
-.site-nav a[aria-current="page"] {
-  color: var(--color-accent);
-  font-weight: 700;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .site-nav a:hover {
-    color: var(--color-accent);
-  }
-}
-
-.menu-toggle {
-  display: inline-grid;
-  place-items: center;
-  min-width: 2.75rem;
-  min-height: 2.75rem;
-  padding: var(--space-2);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  background: var(--color-bg);
-  color: var(--color-heading);
-  transition:
-    border-color var(--duration-fast) var(--ease-standard),
-    background-color var(--duration-fast) var(--ease-standard);
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .menu-toggle:hover {
-    border-color: var(--color-accent);
-    background: var(--color-accent-soft);
-  }
-}
-
-
-/* Footer foundation */
-.site-footer {
-  border-top: 1px solid var(--color-border);
-  background: var(--color-footer-bg);
-  color: var(--color-text);
-}
-
-.site-footer a {
-  color: var(--color-text);
-}
-
-.site-footer a:hover {
-  color: var(--color-accent);
-}
-
-.site-footer__grid {
-  gap: var(--space-8);
-}
-
-.site-footer__heading {
-  margin: 0 0 var(--space-3);
-  color: var(--color-heading);
-  font-size: var(--font-size-base);
-  font-weight: 700;
-}
-
-.site-footer__links {
-  display: grid;
-  gap: var(--space-2);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.site-footer__bottom {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: var(--space-3);
-  padding-block: var(--space-6);
-  border-top: 1px solid var(--color-border);
-  color: var(--color-text-muted);
-  font-size: var(--font-size-sm);
-}
-
-
 /* Badge and tag foundation */
 .badge,
 .tag {
@@ -432,7 +366,6 @@ textarea.form-control {
   padding: 0;
   list-style: none;
 }
-
 
 /* Status and notice foundation */
 .status-message {
@@ -467,4 +400,10 @@ textarea.form-control {
 
 .status-message--muted {
   color: var(--color-text-muted);
+}
+
+@media (min-width: 48rem) {
+  .site-nav a {
+    padding-block: var(--space-2);
+  }
 }
