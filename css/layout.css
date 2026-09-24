@@ -130,9 +130,6 @@
 
 .home-work__item {
   padding: var(--space-6);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  background: var(--color-bg);
 }
 
 .home-work__label {
@@ -323,7 +320,7 @@
 .story-grid article > p:last-child { margin-bottom: 0; color: var(--color-text-muted); }
 
 .contact-grid { display: grid; gap: var(--space-4); }
-.contact-card { padding: var(--space-8); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg); }
+.contact-card { padding: var(--space-8); }
 .contact-label { margin-bottom: var(--space-3); color: var(--color-text-muted); font-size: var(--font-size-sm); font-weight: 700; }
 .contact-card h2 { margin-bottom: var(--space-3); font-size: var(--font-size-xl); overflow-wrap: anywhere; }
 .contact-card p:not(.contact-label) { color: var(--color-text-muted); }
