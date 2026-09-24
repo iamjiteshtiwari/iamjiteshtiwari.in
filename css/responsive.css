@@ -158,6 +158,20 @@
 }
 
 @media (min-width: 64rem) {
+  .home-intro {
+    min-height: min(42rem, calc(100svh - 4.5rem));
+    display: grid;
+    align-items: center;
+  }
+
+  .home-intro__grid {
+    width: 100%;
+  }
+
+  .home-intro__summary {
+    padding: var(--space-8) var(--space-10);
+  }
+
   .site-nav {
     gap: var(--space-6);
   }
