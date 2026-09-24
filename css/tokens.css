@@ -1,15 +1,23 @@
 :root {
-  /* Color system */
+  /*
+   * ACTIVE THEME
+   * Change these color values to switch the whole website theme from one place.
+   * Ten ready-made palettes are included below as [data-theme="..."] presets.
+   */
   --color-bg: #ffffff;
-  --color-surface: #f7f7f5;
-  --color-surface-strong: #eeeeeb;
-  --color-text: #171717;
-  --color-text-muted: #666666;
-  --color-text-subtle: #888888;
-  --color-border: #dddddd;
-  --color-accent: #1d4ed8;
-  --color-accent-hover: #173ea6;
+  --color-surface: #f3f8ff;
+  --color-surface-strong: #dbeafe;
+  --color-text: #102a43;
+  --color-text-muted: #486581;
+  --color-text-subtle: #627d98;
+  --color-border: #c9d8ea;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
   --color-accent-contrast: #ffffff;
+  --color-header-bg: #eff6ff;
+  --color-footer-bg: #dbeafe;
+  --color-heading: #0f2f5f;
+}
 
   /* Typography */
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -55,4 +63,181 @@
   --duration-fast: 150ms;
   --duration-normal: 220ms;
   --ease-standard: ease;
+}
+
+
+/*
+ * READY-MADE COLOR PRESETS
+ * To use a preset, copy its values into the ACTIVE THEME block above.
+ * The website remains dependency-free and all components use these tokens.
+ */
+
+/* Ocean Blue */
+[data-theme="ocean-blue"] {
+  --color-bg: #ffffff;
+  --color-surface: #f3f8ff;
+  --color-surface-strong: #dbeafe;
+  --color-text: #102a43;
+  --color-text-muted: #486581;
+  --color-text-subtle: #627d98;
+  --color-border: #c9d8ea;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-accent-contrast: #ffffff;
+  --color-header-bg: #eff6ff;
+  --color-footer-bg: #dbeafe;
+  --color-heading: #0f2f5f;
+}
+
+/* Emerald */
+[data-theme="emerald"] {
+  --color-bg: #ffffff;
+  --color-surface: #f2fbf7;
+  --color-surface-strong: #d7f3e5;
+  --color-text: #12352b;
+  --color-text-muted: #4b6b60;
+  --color-text-subtle: #718a82;
+  --color-border: #c8dfd5;
+  --color-accent: #059669;
+  --color-accent-hover: #047857;
+  --color-accent-contrast: #ffffff;
+  --color-header-bg: #ecfdf5;
+  --color-footer-bg: #d7f3e5;
+  --color-heading: #104d3a;
+}
+
+/* Royal Purple */
+[data-theme="royal-purple"] {
+  --color-bg: #ffffff;
+  --color-surface: #f7f3ff;
+  --color-surface-strong: #e9ddff;
+  --color-text: #28153f;
+  --color-text-muted: #665577;
+  --color-text-subtle: #89769b;
+  --color-border: #dccfee;
+  --color-accent: #7c3aed;
+  --color-accent-hover: #6d28d9;
+  --color-accent-contrast: #ffffff;
+  --color-header-bg: #f5f3ff;
+  --color-footer-bg: #e9ddff;
+  --color-heading: #35145e;
+}
+
+/* Sunset Orange */
+[data-theme="sunset-orange"] {
+  --color-bg: #ffffff;
+  --color-surface: #fff7ed;
+  --color-surface-strong: #fed7aa;
+  --color-text: #3b1d0b;
+  --color-text-muted: #795548;
+  --color-text-subtle: #9b7560;
+  --color-border: #ecd4c0;
+  --color-accent: #ea580c;
+  --color-accent-hover: #c2410c;
+  --color-accent-contrast: #ffffff;
+  --color-header-bg: #fff7ed;
+  --color-footer-bg: #fed7aa;
+  --color-heading: #65240a;
+}
+
+/* Teal */
+[data-theme="teal"] {
+  --color-bg: #ffffff;
+  --color-surface: #f0fafa;
+  --color-surface-strong: #ccf1ef;
+  --color-text: #123333;
+  --color-text-muted: #4d6b6b;
+  --color-text-subtle: #718989;
+  --color-border: #c9dddd;
+  --color-accent: #0f766e;
+  --color-accent-hover: #115e59;
+  --color-accent-contrast: #ffffff;
+  --color-header-bg: #ecfeff;
+  --color-footer-bg: #ccf1ef;
+  --color-heading: #0f4c4c;
+}
+
+/* Coral Rose */
+[data-theme="coral-rose"] {
+  --color-bg: #ffffff;
+  --color-surface: #fff5f6;
+  --color-surface-strong: #ffdce1;
+  --color-text: #3f1720;
+  --color-text-muted: #79545b;
+  --color-text-subtle: #99767c;
+  --color-border: #ebcdd2;
+  --color-accent: #e11d48;
+  --color-accent-hover: #be123c;
+  --color-accent-contrast: #ffffff;
+  --color-header-bg: #fff1f2;
+  --color-footer-bg: #ffdce1;
+  --color-heading: #68152a;
+}
+
+/* Indigo */
+[data-theme="indigo"] {
+  --color-bg: #ffffff;
+  --color-surface: #f4f5ff;
+  --color-surface-strong: #dde2ff;
+  --color-text: #18224a;
+  --color-text-muted: #53608a;
+  --color-text-subtle: #737fa3;
+  --color-border: #cdd3ed;
+  --color-accent: #4f46e5;
+  --color-accent-hover: #4338ca;
+  --color-accent-contrast: #ffffff;
+  --color-header-bg: #eef2ff;
+  --color-footer-bg: #dde2ff;
+  --color-heading: #222e75;
+}
+
+/* Forest */
+[data-theme="forest"] {
+  --color-bg: #ffffff;
+  --color-surface: #f3f8f2;
+  --color-surface-strong: #dcebd8;
+  --color-text: #1b3020;
+  --color-text-muted: #526957;
+  --color-text-subtle: #748977;
+  --color-border: #ceddce;
+  --color-accent: #15803d;
+  --color-accent-hover: #166534;
+  --color-accent-contrast: #ffffff;
+  --color-header-bg: #f0fdf4;
+  --color-footer-bg: #dcebd8;
+  --color-heading: #1e4d27;
+}
+
+/* Berry */
+[data-theme="berry"] {
+  --color-bg: #ffffff;
+  --color-surface: #fff4fb;
+  --color-surface-strong: #f5d8eb;
+  --color-text: #3d1830;
+  --color-text-muted: #76566d;
+  --color-text-subtle: #97788d;
+  --color-border: #e7cbdc;
+  --color-accent: #c026d3;
+  --color-accent-hover: #a21caf;
+  --color-accent-contrast: #ffffff;
+  --color-header-bg: #fdf4ff;
+  --color-footer-bg: #f5d8eb;
+  --color-heading: #65145e;
+}
+
+/* Charcoal Gold */
+[data-theme="charcoal-gold"] {
+  --color-bg: #ffffff;
+  --color-surface: #f8f7f2;
+  --color-surface-strong: #e8e4d5;
+  --color-text: #27251f;
+  --color-text-muted: #68645a;
+  --color-text-subtle: #898477;
+  --color-border: #dad6c7;
+  --color-accent: #b7791f;
+  --color-accent-hover: #975a16;
+  --color-accent-contrast: #ffffff;
+  --color-header-bg: #fffaf0;
+  --color-footer-bg: #e8e4d5;
+  --color-heading: #4a3a14;
 }
