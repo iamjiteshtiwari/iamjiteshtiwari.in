@@ -295,7 +295,7 @@
 .home-interests h2,
 .home-thoughts h2,
 .home-stories h2,
-.home-overview h2 {
+.section:has(.home-overview) .section-heading h2 {
   max-width: none;
   text-wrap: balance;
 }
