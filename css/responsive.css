@@ -285,3 +285,17 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Homepage heading width refinement */
+.home-status h2,
+.home-purpose h2,
+.home-work .section-heading h2,
+.home-capabilities .section-heading h2,
+.home-learning h2,
+.home-interests h2,
+.home-thoughts h2,
+.home-stories h2,
+.home-overview h2 {
+  max-width: none;
+  text-wrap: balance;
+}
