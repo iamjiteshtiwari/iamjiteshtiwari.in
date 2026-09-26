@@ -283,7 +283,6 @@
 }
 
 .home-status__grid > div:first-child::after {
-  content: "01";
   position: absolute;
   top: 0.15rem;
   right: 0;
@@ -353,7 +352,6 @@
 }
 
 .home-purpose__grid > div:first-child::after {
-  content: "02";
   position: absolute;
   top: 0.15rem;
   right: 0;
@@ -433,7 +431,6 @@
 }
 
 .home-work__item::after {
-  content: "01";
   position: absolute;
   top: var(--space-6);
   right: var(--space-6);
@@ -454,16 +451,8 @@
   background: var(--color-accent);
 }
 
-.home-work__item:nth-child(2)::after {
-  content: "02";
-}
-
 .home-work__item:nth-child(3)::before {
   background: var(--color-heading);
-}
-
-.home-work__item:nth-child(3)::after {
-  content: "03";
 }
 
 .home-work__label {
@@ -534,7 +523,6 @@
 }
 
 .home-capabilities__item::after {
-  content: "01";
   position: absolute;
   top: var(--space-6);
   right: var(--space-6);
@@ -550,24 +538,12 @@
   background: var(--color-accent);
 }
 
-.home-capabilities__item:nth-child(2)::after {
-  content: "02";
-}
-
 .home-capabilities__item:nth-child(3)::before {
   background: var(--color-heading);
 }
 
-.home-capabilities__item:nth-child(3)::after {
-  content: "03";
-}
-
 .home-capabilities__item:nth-child(4)::before {
   background: var(--color-text-subtle);
-}
-
-.home-capabilities__item:nth-child(4)::after {
-  content: "04";
 }
 
 .home-capabilities__item h3 {
@@ -656,7 +632,6 @@
 }
 
 .home-learning__card::after {
-  content: "01";
   position: absolute;
   top: var(--space-6);
   right: var(--space-6);
@@ -672,24 +647,12 @@
   background: var(--color-accent);
 }
 
-.home-learning__card:nth-child(2)::after {
-  content: "02";
-}
-
 .home-learning__card:nth-child(3)::before {
   background: var(--color-heading);
 }
 
-.home-learning__card:nth-child(3)::after {
-  content: "03";
-}
-
 .home-learning__card:nth-child(4)::before {
   background: var(--color-text-subtle);
-}
-
-.home-learning__card:nth-child(4)::after {
-  content: "04";
 }
 
 .home-learning__content .text-link {
@@ -755,18 +718,6 @@
 
 .home-interests__card:nth-child(4)::before {
   background: var(--color-text-subtle);
-}
-
-.home-interests__number {
-  position: relative;
-  z-index: 1;
-  padding-top: 0.1rem;
-  color: var(--color-border-strong);
-  font-family: var(--font-mono);
-  font-size: 1.8rem;
-  font-weight: 800;
-  letter-spacing: -0.08em;
-  line-height: 1;
 }
 
 .home-interests__card-content {
