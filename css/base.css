@@ -100,7 +100,11 @@ h2 {
 }
 
 h3 {
-  font-size: var(--font-size-xl);
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
 }
 
 p {
