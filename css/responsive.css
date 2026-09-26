@@ -300,3 +300,14 @@
   max-width: none;
   text-wrap: wrap;
 }
+
+/* Homepage feature sections: stack heading and content on desktop */
+.home-status__grid,
+.home-purpose__grid,
+.home-learning__grid,
+.home-interests__grid,
+.home-thoughts__grid,
+.home-stories__grid {
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
