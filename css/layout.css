@@ -29,8 +29,7 @@
   background: var(--color-header-bg);
 }
 
-.site-header .container,
-.site-footer .container {
+.site-header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
