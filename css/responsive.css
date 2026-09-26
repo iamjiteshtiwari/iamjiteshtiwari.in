@@ -49,6 +49,14 @@
     aspect-ratio: 16 / 10;
   }
 
+  .site-footer .site-footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer__nav {
+    grid-template-columns: 1fr;
+  }
+
 }
 
 @media (min-width: 48rem) {
