@@ -132,7 +132,7 @@
   .home-interests__grid,
   .home-thoughts__grid,
   .home-stories__grid {
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: var(--space-12);
   }
 
