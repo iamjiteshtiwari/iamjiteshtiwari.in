@@ -19,7 +19,6 @@
   <meta name="twitter:title" content="Contact, Jitesh Tiwari, Professional, Projects & Collaboration">
   <meta name="twitter:description" content="Contact Jitesh Tiwari for professional opportunities, projects, collaboration, digital work, or general enquiries.">
 
-  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -62,6 +61,7 @@
   <link rel="stylesheet" href="/css/layout.css?v=20260924">
   <link rel="stylesheet" href="/css/utilities.css">
   <link rel="stylesheet" href="/css/responsive.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -70,12 +70,7 @@
       <a class="site-brand" href="/" aria-label="iamjiteshtiwari home"><span class="site-brand__code" aria-hidden="true">&lt;/&gt;</span><span class="site-brand__text"><span class="site-brand__prefix">iam</span><span class="site-brand__name">jitesh</span><span class="site-brand__suffix">tiwari</span></span></a>
       <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation"><span class="visually-hidden">Toggle navigation</span>Menu</button>
       <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/professional/">Professional</a>
-        <a href="/projects/">Projects</a>
-        <a href="/thoughts/">Thoughts</a>
-        <a href="/contact/" aria-current="page">Contact</a>
+        <a href="/">Home</a><a href="/about/">About</a><a href="/professional/">Professional</a><a href="/projects/">Projects</a><a href="/thoughts/">Thoughts</a><a href="/contact/" aria-current="page">Contact</a>
       </nav>
     </div>
   </header>
@@ -92,14 +87,12 @@
     <section class="section section--surface">
       <div class="container contact-grid">
         <article class="contact-card">
-          <p class="contact-label">Email</p>
-          <h2>contact@iamjiteshtiwari.in</h2>
+          <p class="contact-label">Email</p><h2>contact@iamjiteshtiwari.in</h2>
           <p>For professional enquiries, opportunities, collaboration, and general contact.</p>
           <a class="button button--primary" href="mailto:contact@iamjiteshtiwari.in">Send an email</a>
         </article>
         <article class="contact-card">
-          <p class="contact-label">Mobile</p>
-          <h2>+91 8169272622</h2>
+          <p class="contact-label">Mobile</p><h2>+91 8169272622</h2>
           <p>Available for direct contact when a phone conversation is appropriate.</p>
           <a class="button button--secondary" href="tel:+918169272622">Call me</a>
         </article>
@@ -113,29 +106,38 @@
           <h2>Tell me what you have in mind.</h2>
           <p>Use the form for project enquiries, professional opportunities, collaboration, or a general message.</p>
         </div>
-        <form class="contact-form" action="/contact/send.php" method="post">
+
+        <form class="contact-form" id="contact-form" action="https://script.google.com/macros/s/AKfycbwKj3mrZPxfggC4W2953eRYeFLBvtIRR_j4mWF1nYLEwXlZM_IZBmESPv4WBvLgpuJ49Q/exec" method="post">
           <div class="contact-form__field">
             <label for="contact-name">Name</label>
-            <input id="contact-name" name="name" type="text" autocomplete="name" required>
+            <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="100" required>
           </div>
           <div class="contact-form__field">
             <label for="contact-email">Email</label>
-            <input id="contact-email" name="email" type="email" autocomplete="email" required>
+            <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+          </div>
+          <div class="contact-form__field">
+            <label for="contact-mobile">Mobile <span>(optional)</span></label>
+            <input id="contact-mobile" name="mobile" type="tel" autocomplete="tel" maxlength="20" inputmode="tel">
           </div>
           <div class="contact-form__field">
             <label for="contact-subject">Subject</label>
-            <input id="contact-subject" name="subject" type="text" required>
+            <input id="contact-subject" name="subject" type="text" maxlength="200" required>
           </div>
           <div class="contact-form__field">
             <label for="contact-message">Message</label>
-            <textarea id="contact-message" name="message" rows="7" required></textarea>
+            <textarea id="contact-message" name="message" rows="7" maxlength="5000" required></textarea>
           </div>
           <div class="contact-form__trap" aria-hidden="true">
             <label for="contact-website">Website</label>
             <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
           </div>
-          <button class="button button--primary" type="submit">Send message</button>
+          <div class="contact-form__captcha">
+            <div class="g-recaptcha" data-sitekey="6LcZbtEtAAAAAM793wZ-nmUR9VVy3WxOCXApqdQP"></div>
+          </div>
+          <button class="button button--primary" id="contact-submit" type="submit">Send message</button>
         </form>
+
         <p class="contact-form__status" id="contact-status" role="status" aria-live="polite" hidden></p>
       </div>
     </section>
