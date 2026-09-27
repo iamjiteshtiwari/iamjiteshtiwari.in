@@ -15,7 +15,6 @@ if (siteHeader) {
 
   const updateHeaderState = () => {
     const scrollY = window.scrollY;
-
     if (!isCompact && scrollY > compactAt) {
       isCompact = true;
       siteHeader.classList.add("is-scrolled");
@@ -26,10 +25,7 @@ if (siteHeader) {
   };
 
   const handleScroll = () => {
-    if (scrollFrame !== null) {
-      return;
-    }
-
+    if (scrollFrame !== null) return;
     scrollFrame = window.requestAnimationFrame(() => {
       updateHeaderState();
       scrollFrame = null;
@@ -51,29 +47,17 @@ if (menuToggle && siteNav) {
     const isOpen = siteNav.classList.toggle("is-open");
     menuToggle.setAttribute("aria-expanded", String(isOpen));
     menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
-
-    if (isOpen) {
-      const firstLink = siteNav.querySelector("a");
-      firstLink?.focus();
-    }
+    if (isOpen) siteNav.querySelector("a")?.focus();
   });
 
   siteNav.addEventListener("click", (event) => {
-    if (event.target instanceof HTMLAnchorElement) {
-      closeMenu();
-    }
+    if (event.target instanceof HTMLAnchorElement) closeMenu();
   });
 
   document.addEventListener("click", (event) => {
-    if (!siteNav.classList.contains("is-open")) {
-      return;
-    }
-
+    if (!siteNav.classList.contains("is-open")) return;
     const target = event.target;
-
-    if (target instanceof Node && !siteNav.contains(target) && !menuToggle.contains(target)) {
-      closeMenu();
-    }
+    if (target instanceof Node && !siteNav.contains(target) && !menuToggle.contains(target)) closeMenu();
   });
 
   document.addEventListener("keydown", (event) => {
@@ -84,23 +68,101 @@ if (menuToggle && siteNav) {
   });
 
   window.addEventListener("resize", () => {
-    if (window.matchMedia("(min-width: 48rem)").matches) {
-      closeMenu();
-    }
+    if (window.matchMedia("(min-width: 48rem)").matches) closeMenu();
   });
 }
 
 
+/**
+ * Contact form
+ *
+ * Uses URL-encoded form data so the browser does not need a CORS preflight.
+ */
+const contactForm = document.querySelector("#contact-form");
 const contactStatus = document.querySelector("#contact-status");
+const contactSubmit = document.querySelector("#contact-submit");
 
-if (contactStatus) {
-  const status = new URLSearchParams(window.location.search).get("status");
+if (contactForm && contactStatus) {
+  const showContactStatus = (message, type) => {
+    contactStatus.textContent = message;
+    contactStatus.dataset.status = type;
+    contactStatus.hidden = false;
+  };
 
-  if (status === "success") {
-    contactStatus.textContent = "Thanks — your message has been sent.";
-    contactStatus.hidden = false;
-  } else if (status === "error") {
-    contactStatus.textContent = "The message could not be sent. Please try email instead.";
-    contactStatus.hidden = false;
-  }
+  const setContactBusy = (busy) => {
+    if (contactSubmit) {
+      contactSubmit.disabled = busy;
+      contactSubmit.textContent = busy ? "Sending…" : "Send message";
+    }
+  };
+
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!contactForm.reportValidity()) return;
+
+    const captchaResponse = typeof grecaptcha !== "undefined"
+      ? grecaptcha.getResponse()
+      : "";
+
+    if (!captchaResponse) {
+      showContactStatus("Please complete the reCAPTCHA verification.", "error");
+      return;
+    }
+
+    setContactBusy(true);
+    showContactStatus("Sending your message…", "sending");
+
+    try {
+      const formData = new FormData(contactForm);
+      const body = new URLSearchParams(formData);
+
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body
+      });
+
+      if (!response.ok) {
+        throw new Error("HTTP " + response.status);
+      }
+
+      const data = await response.json();
+
+      if (data.success === true) {
+        showContactStatus(
+          "Your message has been sent successfully. Thank you for reaching out.",
+          "success"
+        );
+        contactForm.reset();
+        if (typeof grecaptcha !== "undefined") grecaptcha.reset();
+        console.info("Contact form submitted successfully.");
+      } else if (data.message === "Please complete the reCAPTCHA verification.") {
+        showContactStatus("Please complete the reCAPTCHA verification.", "error");
+      } else if (data.message === "Too many submissions. Please try again later.") {
+        showContactStatus("Too many submissions. Please try again later.", "error");
+      } else if (
+        data.message === "Please complete all required fields." ||
+        data.message === "Please enter a valid email address." ||
+        data.message === "Please enter a valid mobile number."
+      ) {
+        showContactStatus("Please check the information you entered and try again.", "error");
+      } else {
+        console.error("Contact form API error:", data);
+        showContactStatus(
+          "We could not send your message right now. Please try again later or use the email option above.",
+          "error"
+        );
+        if (typeof grecaptcha !== "undefined") grecaptcha.reset();
+      }
+    } catch (error) {
+      console.error("Contact form request failed:", error);
+      showContactStatus(
+        "We could not connect to the contact service. Please try again later or use the email option above.",
+        "error"
+      );
+      if (typeof grecaptcha !== "undefined") grecaptcha.reset();
+    } finally {
+      setContactBusy(false);
+    }
+  });
 }
