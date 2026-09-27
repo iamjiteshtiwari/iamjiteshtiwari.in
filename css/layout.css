@@ -1486,8 +1486,9 @@
 
 .contact-card h2 {
   margin-bottom: var(--space-3);
-  font-size: var(--font-size-xl);
-  overflow-wrap: break-word;
+  font-size: clamp(1.25rem, 5.5vw, var(--font-size-xl));
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 .contact-card p:not(.contact-label) {
