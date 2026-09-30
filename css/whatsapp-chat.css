@@ -63,9 +63,10 @@
   width: 3.75rem;
   min-height: 3.75rem;
   padding: 0;
+  border: 1px solid var(--color-accent);
   border-radius: 50%;
-  background: var(--color-accent);
-  color: var(--color-accent-contrast);
+  background: var(--color-bg);
+  color: var(--color-accent);
   box-shadow: var(--shadow-md);
 }
 
@@ -212,6 +213,7 @@
   .jt-whatsapp-chat.is-collapsed .jt-whatsapp-chat__bubble {
     width: 3.5rem;
     min-height: 3.5rem;
+    border: 1px solid var(--color-accent);
   }
 
   .jt-whatsapp-chat__close {
