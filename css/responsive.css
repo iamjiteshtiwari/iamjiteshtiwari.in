@@ -23,6 +23,7 @@
 
   .menu-toggle {
     order: 3;
+    margin-left: var(--space-1);
   }
 
   .site-nav {
