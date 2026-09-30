@@ -166,3 +166,172 @@ if (contactForm && contactStatus) {
     }
   });
 }
+
+
+/**
+ * Global site search
+ *
+ * Searches the site's page content on the client side so the website
+ * remains fully static and GitHub Pages compatible.
+ */
+const searchButton = document.querySelector(".search-toggle");
+
+if (searchButton) {
+  const searchablePages = [
+    { url: "/", label: "Home" },
+    { url: "/about/", label: "About" },
+    { url: "/professional/", label: "Professional" },
+    { url: "/projects/", label: "Projects" },
+    { url: "/thoughts/", label: "Thoughts" },
+    { url: "/stories/", label: "Stories" },
+    { url: "/interests/", label: "Interests" },
+    { url: "/capabilities/", label: "Capabilities" },
+    { url: "/current-status/", label: "Current status" },
+    { url: "/contact/", label: "Contact" }
+  ];
+
+  let searchOverlay = null;
+  let searchInput = null;
+  let searchResults = null;
+  let searchIndex = null;
+
+  const normalizeText = (value) => value.toLowerCase().replace(/\s+/g, " ").trim();
+
+  const createSearchOverlay = () => {
+    if (searchOverlay) return;
+    searchOverlay = document.createElement("div");
+    searchOverlay.className = "search-overlay";
+    searchOverlay.hidden = true;
+    searchOverlay.innerHTML = `
+      <div class="search-overlay__backdrop" data-search-close></div>
+      <section class="search-panel" role="dialog" aria-modal="true" aria-labelledby="search-title">
+        <div class="search-panel__box">
+          <span class="search-panel__icon" aria-hidden="true">⌕</span>
+          <h2 id="search-title" class="visually-hidden">Search this website</h2>
+          <input class="search-input" type="search" autocomplete="off" spellcheck="false"
+            placeholder="Search anything..." aria-label="Search this website" aria-controls="search-results">
+          <button class="search-close" type="button" aria-label="Close search">×</button>
+        </div>
+        <div class="search-results" id="search-results" aria-live="polite"></div>
+      </section>
+    `;
+    document.body.appendChild(searchOverlay);
+    searchInput = searchOverlay.querySelector(".search-input");
+    searchResults = searchOverlay.querySelector(".search-results");
+  };
+
+  const escapeHtml = (value) => value.replace(/[&<>"']/g, (character) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
+  }[character]));
+
+  const renderResults = (items, query, loading = false) => {
+    if (!searchResults) return;
+    if (loading) {
+      searchResults.innerHTML = '<p class="search-results__hint">Loading search…</p>';
+      return;
+    }
+    if (!query) {
+      searchResults.innerHTML = '<p class="search-results__hint">Search across pages, projects, skills, work, thoughts, stories and interests.</p>';
+      return;
+    }
+    if (!items.length) {
+      searchResults.innerHTML = `<p class="search-results__empty">No results found for “${escapeHtml(query)}”.</p>`;
+      return;
+    }
+    searchResults.innerHTML = items.slice(0, 8).map((item) => `
+      <a class="search-result" href="${item.url}">
+        <span class="search-result__label">${escapeHtml(item.label)}</span>
+        <strong class="search-result__title">${escapeHtml(item.title)}</strong>
+        <span class="search-result__snippet">${escapeHtml(item.snippet)}</span>
+      </a>
+    `).join("");
+  };
+
+  const buildSearchIndex = async () => {
+    if (searchIndex) return searchIndex;
+    const pages = await Promise.all(searchablePages.map(async (page) => {
+      try {
+        const response = await fetch(page.url, { headers: { Accept: "text/html" } });
+        if (!response.ok) throw new Error("HTTP " + response.status);
+        const html = await response.text();
+        const parsed = new DOMParser().parseFromString(html, "text/html");
+        const main = parsed.querySelector("main");
+        const title = parsed.querySelector("title")?.textContent?.trim() || page.label;
+        const text = main?.textContent?.replace(/\s+/g, " ").trim() || "";
+        return { url: page.url, label: page.label, title, text, normalized: normalizeText(title + " " + text) };
+      } catch (error) {
+        console.warn("Search index could not load:", page.url, error);
+        return null;
+      }
+    }));
+    searchIndex = pages.filter(Boolean);
+    return searchIndex;
+  };
+
+  const getSnippet = (item, query) => {
+    const source = item.text || item.title;
+    const position = source.toLowerCase().indexOf(query.toLowerCase());
+    const start = Math.max(0, (position >= 0 ? position : 0) - 70);
+    const snippet = source.slice(start, start + 180).trim();
+    return (start > 0 ? "…" : "") + snippet + (start + 180 < source.length ? "…" : "");
+  };
+
+  const performSearch = async (value) => {
+    const query = normalizeText(value);
+    if (!query) {
+      renderResults([], "");
+      return;
+    }
+    if (!searchIndex) {
+      renderResults([], query, true);
+      await buildSearchIndex();
+    }
+
+    const terms = query.split(" ").filter(Boolean);
+    const results = searchIndex.map((item) => {
+      const score = terms.reduce((total, term) => {
+        return total
+          + (normalizeText(item.title).includes(term) ? 8 : 0)
+          + (normalizeText(item.label).includes(term) ? 5 : 0)
+          + (item.normalized.includes(term) ? 1 : 0);
+      }, 0);
+      return { ...item, score, snippet: getSnippet(item, query) };
+    })
+    .filter((item) => item.score >= terms.length)
+    .sort((a, b) => b.score - a.score);
+
+    renderResults(results, query);
+  };
+
+  const closeSearch = () => {
+    if (!searchOverlay) return;
+    searchOverlay.hidden = true;
+    document.body.classList.remove("search-is-open");
+    searchButton.focus();
+  };
+
+  const openSearch = () => {
+    createSearchOverlay();
+    searchOverlay.hidden = false;
+    document.body.classList.add("search-is-open");
+    renderResults([], "");
+    searchInput.value = "";
+    searchInput.focus();
+    buildSearchIndex();
+  };
+
+  searchButton.addEventListener("click", openSearch);
+
+  document.addEventListener("click", (event) => {
+    if (!searchOverlay || searchOverlay.hidden || !(event.target instanceof Element)) return;
+    if (event.target.closest("[data-search-close], .search-close")) closeSearch();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && searchOverlay && !searchOverlay.hidden) closeSearch();
+  });
+
+  document.addEventListener("input", (event) => {
+    if (event.target === searchInput) performSearch(event.target.value);
+  });
+}
