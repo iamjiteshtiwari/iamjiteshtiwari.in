@@ -498,3 +498,196 @@ textarea.form-control {
     padding-block: var(--space-2);
   }
 }
+
+
+/* Global search */
+.search-toggle {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  color: var(--color-heading);
+  font-family: var(--font-mono);
+  font-size: 1.35rem;
+  line-height: 1;
+  transition:
+    border-color var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard);
+}
+
+.search-toggle:hover {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.search-toggle:active {
+  background: var(--color-surface-strong);
+}
+
+.site-header.is-scrolled .search-toggle {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+.search-overlay[hidden] {
+  display: none;
+}
+
+.search-overlay__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgb(15 23 42 / 0.46);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.search-panel {
+  position: relative;
+  z-index: 1;
+  width: min(calc(100% - 2rem), 48rem);
+  margin: clamp(4.75rem, 11vh, 7rem) auto 0;
+}
+
+.search-panel__box {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 3.75rem;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+  box-shadow: var(--shadow-md);
+}
+
+.search-panel__icon {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.search-input {
+  width: 100%;
+  min-width: 0;
+  padding: var(--space-2);
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+}
+
+.search-input::placeholder {
+  color: var(--color-text-subtle);
+}
+
+.search-input:focus {
+  outline: 0;
+}
+
+.search-close {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.search-close:hover {
+  background: var(--color-surface);
+  color: var(--color-heading);
+}
+
+.search-results {
+  display: grid;
+  gap: var(--space-2);
+  max-height: min(60vh, 34rem);
+  margin-top: var(--space-3);
+  padding: var(--space-2);
+  overflow-y: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+  box-shadow: var(--shadow-md);
+}
+
+.search-results__hint,
+.search-results__empty {
+  margin: 0;
+  padding: var(--space-5);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+.search-result {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  text-decoration: none;
+  transition:
+    background-color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+
+.search-result:hover {
+  background: var(--color-surface);
+  color: var(--color-text);
+  transform: translateY(-1px);
+}
+
+.search-result__label {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.search-result__title {
+  color: var(--color-heading);
+  font-size: 1rem;
+}
+
+.search-result__snippet {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+}
+
+body.search-is-open {
+  overflow: hidden;
+}
+
+@media (max-width: 47.99rem) {
+  .search-panel {
+    width: min(calc(100% - 1.25rem), 48rem);
+    margin-top: 4.25rem;
+  }
+
+  .search-results {
+    max-height: 62vh;
+  }
+}
