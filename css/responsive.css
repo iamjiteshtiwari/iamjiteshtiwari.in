@@ -1,5 +1,5 @@
 @media (max-width: 47.99rem) {
-  .site-header__inner {
+  .site-header .site-header__inner {
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
