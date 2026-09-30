@@ -2,13 +2,23 @@
   .site-header__inner {
     flex-wrap: wrap;
     align-items: center;
+    justify-content: flex-start;
     gap: var(--space-2);
   }
 
-  /* Keep search and menu together at the right on mobile. */
+  /* Keep the two header controls together on the right. */
+  .site-brand {
+    margin-right: auto;
+  }
+
+  .search-toggle,
+  .menu-toggle {
+    flex: 0 0 auto;
+  }
+
   .search-toggle {
     order: 2;
-    margin-left: auto;
+    margin-left: 0;
   }
 
   .menu-toggle {
