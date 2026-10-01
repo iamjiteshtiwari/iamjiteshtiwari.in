@@ -127,7 +127,7 @@
 
 .jt-whatsapp-chat__close {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   top: -0.5rem;
   right: -0.5rem;
   display: grid;
