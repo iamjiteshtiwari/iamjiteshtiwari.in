@@ -20,6 +20,7 @@
 
 .jt-whatsapp-chat__bubble {
   position: absolute;
+  z-index: 2;
   right: 0;
   bottom: 0;
   display: flex;
@@ -126,6 +127,7 @@
 
 .jt-whatsapp-chat__close {
   position: absolute;
+  z-index: 1;
   top: -0.5rem;
   right: -0.5rem;
   display: grid;
