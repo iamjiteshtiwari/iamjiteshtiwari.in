@@ -39,14 +39,14 @@
 
 .site-header {
   transition:
-    box-shadow var(--duration-normal) var(--ease-standard),
-    background-color var(--duration-normal) var(--ease-standard);
+    box-shadow 180ms var(--ease-standard),
+    background-color 180ms var(--ease-standard);
 }
 
 .site-header__inner {
   transition:
-    min-height var(--duration-normal) var(--ease-standard),
-    padding-block var(--duration-normal) var(--ease-standard);
+    min-height 180ms var(--ease-standard),
+    padding-block 180ms var(--ease-standard);
 }
 
 .site-header.is-scrolled {
@@ -58,16 +58,17 @@
 }
 
 .site-header.is-scrolled .site-brand {
-  min-height: 2.25rem;
+  min-height: 2.5rem;
 }
 
-.site-header.is-scrolled .site-nav a {
-  min-height: 2.25rem;
+.site-header.is-scrolled .site-nav a,
+.site-header.is-scrolled .site-nav__dropdown-toggle {
+  min-height: 2.5rem;
 }
 
 .site-header.is-scrolled .container {
-  min-height: 3rem;
-  padding-block: 0.25rem;
+  min-height: 3.25rem;
+  padding-block: 0.4rem;
 }
 
 .home-intro {
