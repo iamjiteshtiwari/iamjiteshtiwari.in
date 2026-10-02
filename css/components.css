@@ -691,3 +691,21 @@ body.search-is-open {
     max-height: 62vh;
   }
 }
+
+/* Thoughts navigation dropdown */
+.site-nav__dropdown{position:relative;display:inline-flex;align-items:center}
+.site-nav__dropdown-toggle{display:inline-flex;align-items:center;gap:.28rem;min-height:2.75rem;padding:var(--space-2) var(--space-3);border:0;border-radius:var(--radius-sm);background:transparent;color:var(--color-text);font:inherit;font-weight:600;line-height:1;cursor:pointer;transition:color var(--duration-fast) var(--ease-standard),background-color var(--duration-fast) var(--ease-standard)}
+.site-nav__dropdown-toggle:hover,.site-nav__dropdown-toggle[aria-expanded="true"]{background:var(--color-surface);color:var(--color-accent)}
+.site-nav__dropdown-toggle[aria-expanded="true"]{font-weight:700}
+.site-nav__dropdown-menu{position:absolute;top:calc(100% + .5rem);left:50%;z-index:110;min-width:12rem;padding:.45rem;border:1px solid var(--color-border);border-radius:var(--radius-md);background:var(--color-bg);box-shadow:var(--shadow-md);opacity:0;visibility:hidden;pointer-events:none;transform:translate(-50%,-4px);transition:opacity 160ms var(--ease-standard),transform 160ms var(--ease-standard),visibility 160ms var(--ease-standard)}
+.site-nav__dropdown:hover .site-nav__dropdown-menu,.site-nav__dropdown:focus-within .site-nav__dropdown-menu,.site-nav__dropdown.is-open .site-nav__dropdown-menu{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0)}
+.site-nav__dropdown-menu a{display:flex!important;align-items:center;min-height:2.5rem!important;width:100%;padding:var(--space-2) var(--space-3)!important;border-radius:var(--radius-sm);color:var(--color-text)!important;font-weight:600!important;white-space:nowrap;text-decoration:none}
+.site-nav__dropdown-menu a:hover,.site-nav__dropdown-menu a[aria-current="page"]{background:var(--color-accent-soft);color:var(--color-accent)!important;font-weight:700!important;box-shadow:none!important}
+@media(min-width:48rem){.site-nav__dropdown-toggle{padding-block:var(--space-2)}}
+@media(max-width:47.99rem){
+  .site-nav__dropdown{display:block;width:100%}
+  .site-nav__dropdown-toggle{width:100%;justify-content:space-between}
+  .site-nav__dropdown-menu{position:static;display:none;min-width:0;margin:.25rem 0 0;transform:none;box-shadow:none;opacity:1;visibility:visible;pointer-events:auto}
+  .site-nav__dropdown:hover .site-nav__dropdown-menu{display:none}
+  .site-nav__dropdown:focus-within .site-nav__dropdown-menu,.site-nav__dropdown.is-open .site-nav__dropdown-menu{display:block}
+}
