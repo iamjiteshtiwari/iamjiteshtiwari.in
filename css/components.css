@@ -729,7 +729,7 @@ body.search-is-open {
     padding:.4rem;
     border:1px solid var(--color-border);
     border-radius:var(--radius-sm);
-    background:var(--color-surface);
+    background:var(--color-bg);
     box-shadow:inset 3px 0 0 var(--color-brand);
     transform:none;
     opacity:1;
@@ -737,7 +737,7 @@ body.search-is-open {
     pointer-events:auto;
   }
   .site-nav__dropdown:hover .site-nav__dropdown-menu{display:none}
-  .site-nav__dropdown:focus-within .site-nav__dropdown-menu,
+  .site-nav__dropdown:focus-within .site-nav__dropdown-menu{display:none}
   .site-nav__dropdown.is-open .site-nav__dropdown-menu{display:block}
   .site-nav__dropdown-menu a{
     display:flex!important;
