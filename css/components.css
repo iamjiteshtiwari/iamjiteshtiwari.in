@@ -723,9 +723,10 @@ body.search-is-open {
     color:var(--color-accent);
   }
   .site-nav__dropdown-menu{
-    position:static;
-    width:calc(100% - 1rem);
-    margin:.35rem 0 .5rem .5rem;
+    position:relative;
+    left:var(--space-6);
+    width:calc(100% - var(--space-8));
+    margin:.35rem 0 .5rem 0;
     padding:.35rem;
     border:1px solid var(--color-border);
     border-radius:var(--radius-md);
