@@ -752,10 +752,18 @@ body.search-is-open {
     width:100%;
     min-height:2.65rem!important;
     padding:.55rem .75rem!important;
-    color:var(--color-text)!important;
-    background:transparent;
-    text-align:left;
+    margin:0!important;
+    color:#102a43!important;
+    -webkit-text-fill-color:#102a43!important;
+    background:transparent!important;
+    text-align:left!important;
+    font-family:var(--font-sans)!important;
+    font-size:1rem!important;
+    line-height:1.5!important;
     font-weight:600!important;
+    opacity:1!important;
+    visibility:visible!important;
+    text-indent:0!important;
   }
   .site-nav__dropdown-menu a:hover,
   .site-nav__dropdown-menu a:focus-visible,
