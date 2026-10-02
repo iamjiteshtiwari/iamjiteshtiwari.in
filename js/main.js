@@ -74,6 +74,8 @@ document.addEventListener("keydown", (event) => {
     dropdown.classList.remove("is-open");
     const toggle = dropdown.querySelector(".site-nav__dropdown-toggle");
     toggle?.setAttribute("aria-expanded", "false");
+    const menu = dropdown.querySelector(".site-nav__dropdown-menu");
+    if (menu) menu.hidden = true;
   });
 });
 
