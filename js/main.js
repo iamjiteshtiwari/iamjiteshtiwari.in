@@ -14,7 +14,7 @@ document.querySelectorAll(".site-nav").forEach((nav) => {
     button.type = "button";
     button.setAttribute("aria-expanded", "false");
     button.setAttribute("aria-haspopup", "true");
-    button.innerHTML = 'Thoughts <span aria-hidden="true">⌄</span>';
+    button.innerHTML = 'Thoughts <span class="site-nav__dropdown-icon" aria-hidden="true">▾</span>';
     const menu = document.createElement("div");
     menu.className = "site-nav__dropdown-menu";
     const about = document.createElement("a");
@@ -57,13 +57,22 @@ document.addEventListener("click", (event) => {
   });
 });
 
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") return;
+  thoughtsDropdowns.forEach((dropdown) => {
+    dropdown.classList.remove("is-open");
+    const toggle = dropdown.querySelector(".site-nav__dropdown-toggle");
+    toggle?.setAttribute("aria-expanded", "false");
+  });
+});
+
 if (currentYear) {
   currentYear.textContent = new Date().getFullYear();
 }
 
 if (siteHeader) {
-  const compactAt = 48;
-  const expandedAt = 12;
+  const compactAt = 80;
+  const expandedAt = 24;
   let isCompact = siteHeader.classList.contains("is-scrolled");
   let scrollFrame = null;
 
