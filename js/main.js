@@ -3,6 +3,60 @@ const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector("#primary-navigation");
 const siteHeader = document.querySelector(".site-header");
 
+// Keep the Thoughts menu consistent across every page.
+document.querySelectorAll(".site-nav").forEach((nav) => {
+  const thoughtsLink = nav.querySelector('a[href="/thoughts/"]');
+  if (thoughtsLink && !thoughtsLink.closest(".site-nav__dropdown")) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "site-nav__dropdown";
+    const button = document.createElement("button");
+    button.className = "site-nav__dropdown-toggle";
+    button.type = "button";
+    button.setAttribute("aria-expanded", "false");
+    button.setAttribute("aria-haspopup", "true");
+    button.innerHTML = 'Thoughts <span aria-hidden="true">⌄</span>';
+    const menu = document.createElement("div");
+    menu.className = "site-nav__dropdown-menu";
+    const about = document.createElement("a");
+    about.href = "/thoughts/";
+    about.textContent = "About Thoughts";
+    const blogs = document.createElement("a");
+    blogs.href = "/thoughts/blogs/";
+    blogs.textContent = "My Blogs";
+    menu.append(about, blogs);
+    wrapper.append(button, menu);
+    thoughtsLink.replaceWith(wrapper);
+  }
+});
+
+const thoughtsDropdowns = document.querySelectorAll(".site-nav__dropdown");
+thoughtsDropdowns.forEach((dropdown) => {
+  const toggle = dropdown.querySelector(".site-nav__dropdown-toggle");
+  if (!toggle) return;
+  toggle.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    const isOpen = dropdown.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+  });
+  dropdown.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      dropdown.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+});
+
+document.addEventListener("click", (event) => {
+  if (!(event.target instanceof Node)) return;
+  thoughtsDropdowns.forEach((dropdown) => {
+    if (!dropdown.contains(event.target)) {
+      dropdown.classList.remove("is-open");
+      dropdown.querySelector(".site-nav__dropdown-toggle")?.setAttribute("aria-expanded", "false");
+    }
+  });
+});
+
 if (currentYear) {
   currentYear.textContent = new Date().getFullYear();
 }
@@ -183,6 +237,7 @@ if (searchButton) {
     { url: "/professional/", label: "Professional" },
     { url: "/projects/", label: "Projects" },
     { url: "/thoughts/", label: "Thoughts" },
+    { url: "/thoughts/blogs/", label: "My Blogs" },
     { url: "/stories/", label: "Stories" },
     { url: "/interests/", label: "Interests" },
     { url: "/capabilities/", label: "Capabilities" },
