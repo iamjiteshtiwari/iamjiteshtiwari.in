@@ -1200,15 +1200,6 @@
 .status-grid article:nth-child(4)::before { background: var(--color-text-subtle); }
 .status-grid article:nth-child(5)::before { background: var(--color-brand); }
 
-.status-label {
-  margin-bottom: var(--space-4);
-  color: var(--color-border-strong);
-  font-family: var(--font-mono);
-  font-size: 1.75rem;
-  font-weight: 800;
-  letter-spacing: -0.08em;
-  line-height: 1;
-}
 
 .status-grid h3 {
   margin-bottom: var(--space-3);
@@ -1251,15 +1242,6 @@
 .learning-grid article:nth-child(3)::before { background: var(--color-heading); }
 .learning-grid article:nth-child(4)::before { background: var(--color-text-subtle); }
 
-.learning-label {
-  margin-bottom: var(--space-4);
-  color: var(--color-border-strong);
-  font-family: var(--font-mono);
-  font-size: 1.75rem;
-  font-weight: 800;
-  letter-spacing: -0.08em;
-  line-height: 1;
-}
 
 .learning-grid h3 {
   margin-bottom: var(--space-3);
@@ -1667,4 +1649,15 @@
 .page-hero__inner > p {
   max-width: var(--content-max);
   color: var(--color-text-muted);
+}
+
+/* Keep section headings and their following grids on one consistent spacing rhythm. */
+.section-heading + .project-grid,
+.section-heading + .capability-grid,
+.section-heading + .status-grid,
+.section-heading + .learning-grid,
+.section-heading + .professional-grid,
+.section-heading + .website-projects,
+.section-heading + .interest-grid {
+  margin-top: 0;
 }
