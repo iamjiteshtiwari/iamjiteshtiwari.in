@@ -253,6 +253,8 @@ if (searchButton) {
     { url: "/about/", label: "About" },
     { url: "/professional/", label: "Professional" },
     { url: "/projects/", label: "Projects" },
+    { url: "/services/", label: "Services" },
+    { url: "/pricing/", label: "Pricing & Estimates" },
     { url: "/thoughts/", label: "Thoughts" },
     { url: "/thoughts/blogs/", label: "My Blogs" },
     { url: "/stories/", label: "Stories" },
