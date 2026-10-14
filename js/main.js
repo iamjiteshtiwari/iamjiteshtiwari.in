@@ -252,7 +252,9 @@ if (searchButton) {
     { url: "/", label: "Home" },
     { url: "/about/", label: "About" },
     { url: "/professional/", label: "Professional" },
-    { url: "/projects/", label: "Projects" },
+    { url: "/projects/", label: "Work / Portfolio" },
+    { url: "/services/", label: "Digital Marketing Services" },
+    { url: "/pricing/", label: "Pricing" },
     { url: "/thoughts/", label: "Thoughts" },
     { url: "/thoughts/blogs/", label: "My Blogs" },
     { url: "/stories/", label: "Stories" },
@@ -303,7 +305,7 @@ if (searchButton) {
       return;
     }
     if (!query) {
-      searchResults.innerHTML = '<p class="search-results__hint">Search across pages, projects, skills, work, thoughts, stories and interests.</p>';
+      searchResults.innerHTML = '<p class="search-results__hint">Search across pages, professional work, services, skills, and projects.</p>';
       return;
     }
     if (!items.length) {
