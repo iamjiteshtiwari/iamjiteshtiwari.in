@@ -1661,20 +1661,3 @@
 .section-heading + .interest-grid {
   margin-top: 0;
 }
-
-/* Service page: add clear top spacing before every category heading. */
-.service-category {
-  padding-top: var(--space-12);
-}
-
-.service-category + .service-category {
-  margin-top: var(--space-8);
-}
-
-.service-category > .section-heading {
-  margin-bottom: var(--space-6);
-}
-
-.service-category > .project-grid {
-  margin-top: 0;
-}
