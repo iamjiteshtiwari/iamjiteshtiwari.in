@@ -1662,13 +1662,13 @@
   margin-top: 0;
 }
 
-/* Service page: separate each category from the previous card group. */
-.section-heading + .service-category {
-  margin-top: var(--space-8);
+/* Service page: add clear top spacing before every category heading. */
+.service-category {
+  padding-top: var(--space-12);
 }
 
 .service-category + .service-category {
-  margin-top: var(--space-16);
+  margin-top: var(--space-8);
 }
 
 .service-category > .section-heading {
