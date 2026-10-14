@@ -1661,3 +1661,20 @@
 .section-heading + .interest-grid {
   margin-top: 0;
 }
+
+/* Service page: separate each category from the previous card group. */
+.section-heading + .service-category {
+  margin-top: var(--space-8);
+}
+
+.service-category + .service-category {
+  margin-top: var(--space-16);
+}
+
+.service-category > .section-heading {
+  margin-bottom: var(--space-6);
+}
+
+.service-category > .project-grid {
+  margin-top: 0;
+}
